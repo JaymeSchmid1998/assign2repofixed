@@ -3632,7 +3632,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectWithoutProperties = _$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/objectWithoutProperties");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\ActivityIndicator\\ActivityIndicator.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\ActivityIndicator\\ActivityIndicator.js";
 
   var Platform = _$$_REQUIRE(_dependencyMap[3], "Platform");
 
@@ -8392,7 +8392,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _extends = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/extends");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\View\\View.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\View\\View.js";
 
   var React = _$$_REQUIRE(_dependencyMap[1], "React");
 
@@ -44228,7 +44228,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _extends = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/extends");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\ProgressBarAndroid\\ProgressBarAndroid.android.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\ProgressBarAndroid\\ProgressBarAndroid.android.js";
 
   var React = _$$_REQUIRE(_dependencyMap[1], "React");
 
@@ -44278,7 +44278,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\ART\\ReactNativeART.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\ART\\ReactNativeART.js";
   var _components = {
     Surface: {
       displayName: "Surface"
@@ -49313,7 +49313,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Button.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Button.js";
   var _components = {
     Button: {
       displayName: "Button"
@@ -49493,7 +49493,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Text\\Text.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Text\\Text.js";
   var _components = {
     TouchableText: {
       displayName: "TouchableText"
@@ -49938,7 +49938,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Touchable\\Touchable.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Touchable\\Touchable.js";
 
   var BoundingDimensions = _$$_REQUIRE(_dependencyMap[2], "BoundingDimensions");
 
@@ -51590,7 +51590,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Touchable\\TouchableOpacity.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Touchable\\TouchableOpacity.js";
 
   var Animated = _$$_REQUIRE(_dependencyMap[1], "Animated");
 
@@ -56006,7 +56006,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Animated\\src\\createAnimatedComponent.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Animated\\src\\createAnimatedComponent.js";
   var _components = {
     AnimatedComponent: {
       displayName: "AnimatedComponent",
@@ -56237,7 +56237,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Lists\\FlatList.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Lists\\FlatList.js";
   var _components = {
     FlatList: {
       displayName: "FlatList"
@@ -56576,7 +56576,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Lists\\VirtualizedList.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Lists\\VirtualizedList.js";
   var _components = {
     VirtualizedList: {
       displayName: "VirtualizedList"
@@ -58475,7 +58475,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\RefreshControl\\RefreshControl.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\RefreshControl\\RefreshControl.js";
   var _components = {
     RefreshControl: {
       displayName: "RefreshControl"
@@ -58663,7 +58663,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollView.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollView.js";
   var _components = {
     ScrollView: {
       displayName: "ScrollView"
@@ -59647,7 +59647,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollViewStickyHeader.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollViewStickyHeader.js";
   var _components = {
     ScrollViewStickyHeader: {
       displayName: "ScrollViewStickyHeader"
@@ -60285,7 +60285,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Image\\Image.android.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Image\\Image.android.js";
 
   var DeprecatedImageStylePropTypes = _$$_REQUIRE(_dependencyMap[3], "DeprecatedImageStylePropTypes");
 
@@ -60605,7 +60605,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Lists\\SectionList.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Lists\\SectionList.js";
   var _components = {
     SectionList: {
       displayName: "SectionList"
@@ -60753,7 +60753,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Lists\\VirtualizedSectionList.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Lists\\VirtualizedSectionList.js";
   var _components = {
     VirtualizedSectionList: {
       displayName: "VirtualizedSectionList"
@@ -61254,7 +61254,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\CheckBox\\CheckBox.android.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\CheckBox\\CheckBox.android.js";
   var _components = {
     CheckBox: {
       displayName: "CheckBox"
@@ -61428,7 +61428,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\DatePicker\\DatePickerIOS.android.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\DatePicker\\DatePickerIOS.android.js";
   var _components = {
     DummyDatePickerIOS: {
       displayName: "DummyDatePickerIOS"
@@ -61529,7 +61529,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\DrawerAndroid\\DrawerLayoutAndroid.android.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\DrawerAndroid\\DrawerLayoutAndroid.android.js";
   var _components = {
     DrawerLayoutAndroid: {
       displayName: "DrawerLayoutAndroid"
@@ -62089,7 +62089,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Image\\ImageBackground.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Image\\ImageBackground.js";
   var _components = {
     ImageBackground: {
       displayName: "ImageBackground"
@@ -62312,7 +62312,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\TextInput\\InputAccessoryView.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\TextInput\\InputAccessoryView.js";
   var _components = {
     InputAccessoryView: {
       displayName: "InputAccessoryView"
@@ -62417,7 +62417,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Keyboard\\KeyboardAvoidingView.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Keyboard\\KeyboardAvoidingView.js";
   var _components = {
     KeyboardAvoidingView: {
       displayName: "KeyboardAvoidingView"
@@ -62641,7 +62641,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _extends = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/extends");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Lists\\ListView\\ListView.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Lists\\ListView\\ListView.js";
 
   var InternalListViewType = _$$_REQUIRE(_dependencyMap[2], "InternalListViewType");
 
@@ -63584,7 +63584,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\UnimplementedViews\\UnimplementedView.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\UnimplementedViews\\UnimplementedView.js";
   var _components = {
     UnimplementedView: {
       displayName: "UnimplementedView"
@@ -63669,7 +63669,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Modal\\Modal.js",
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Modal\\Modal.js",
       _container;
 
   var _components = {
@@ -63881,7 +63881,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\ReactNative\\AppContainer.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\ReactNative\\AppContainer.js";
   var _components = {
     AppContainer: {
       displayName: "AppContainer"
@@ -64083,7 +64083,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\Inspector.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\Inspector.js";
   var _components = {
     Inspector: {
       displayName: "Inspector"
@@ -64440,7 +64440,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\InspectorOverlay.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\InspectorOverlay.js";
   var _components = {
     InspectorOverlay: {
       displayName: "InspectorOverlay"
@@ -64579,7 +64579,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\ElementBox.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\ElementBox.js";
   var _components = {
     ElementBox: {
       displayName: "ElementBox"
@@ -64759,7 +64759,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\BorderBox.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\BorderBox.js";
   var _components = {
     BorderBox: {
       displayName: "BorderBox"
@@ -64951,7 +64951,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\InspectorPanel.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\InspectorPanel.js";
   var _components = {
     InspectorPanel: {
       displayName: "InspectorPanel"
@@ -65216,7 +65216,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\ElementProperties.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\ElementProperties.js";
   var _components = {
     ElementProperties: {
       displayName: "ElementProperties"
@@ -65447,7 +65447,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\BoxInspector.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\BoxInspector.js";
   var _components = {
     BoxInspector: {
       displayName: "BoxInspector"
@@ -65669,7 +65669,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\StyleInspector.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\StyleInspector.js";
   var _components = {
     StyleInspector: {
       displayName: "StyleInspector"
@@ -65790,7 +65790,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Touchable\\TouchableHighlight.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Touchable\\TouchableHighlight.js";
 
   var DeprecatedColorPropType = _$$_REQUIRE(_dependencyMap[1], "DeprecatedColorPropType");
 
@@ -66062,7 +66062,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\NetworkOverlay.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\NetworkOverlay.js";
   var _components = {
     NetworkOverlay: {
       displayName: "NetworkOverlay"
@@ -67053,7 +67053,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\PerformanceOverlay.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Inspector\\PerformanceOverlay.js";
   var _components = {
     PerformanceOverlay: {
       displayName: "PerformanceOverlay"
@@ -67179,7 +67179,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\YellowBox.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\YellowBox.js";
   var _components = {
     YellowBox: {
       displayName: "YellowBox"
@@ -67408,7 +67408,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxList.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxList.js";
   var _components = {
     YellowBoxList: {
       displayName: "YellowBoxList"
@@ -67658,7 +67658,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\SafeAreaView\\SafeAreaView.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\SafeAreaView\\SafeAreaView.js";
   var _components = {
     SafeAreaView: {
       displayName: "SafeAreaView"
@@ -67761,7 +67761,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxButton.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxButton.js";
 
   var React = _$$_REQUIRE(_dependencyMap[0], "React");
 
@@ -67827,7 +67827,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxPressable.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxPressable.js";
   var _components = {
     YellowBoxPressable: {
       displayName: "YellowBoxPressable"
@@ -67966,7 +67966,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxInspector.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxInspector.js";
   var _components = {
     YellowBoxInspector: {
       displayName: "YellowBoxInspector"
@@ -68246,7 +68246,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _toConsumableArray = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/toConsumableArray");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\Data\\YellowBoxCategory.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\Data\\YellowBoxCategory.js";
 
   var React = _$$_REQUIRE(_dependencyMap[1], "React");
 
@@ -68399,7 +68399,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxInspectorFooter.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxInspectorFooter.js";
 
   var React = _$$_REQUIRE(_dependencyMap[0], "React");
 
@@ -68506,7 +68506,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxInspectorHeader.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxInspectorHeader.js";
 
   var Image = _$$_REQUIRE(_dependencyMap[0], "Image");
 
@@ -68688,7 +68688,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxInspectorSourceMapStatus.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxInspectorSourceMapStatus.js";
   var _components = {
     YellowBoxInspectorSourceMapStatus: {
       displayName: "YellowBoxInspectorSourceMapStatus"
@@ -68887,7 +68887,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxInspectorStackFrame.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxInspectorStackFrame.js";
 
   var React = _$$_REQUIRE(_dependencyMap[0], "React");
 
@@ -68978,7 +68978,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxListRow.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\YellowBox\\UI\\YellowBoxListRow.js";
   var _components = {
     YellowBoxListRow: {
       displayName: "YellowBoxListRow"
@@ -69528,7 +69528,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Picker\\Picker.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Picker\\Picker.js";
   var _components = {
     PickerItem: {
       displayName: "PickerItem"
@@ -69655,7 +69655,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Picker\\PickerAndroid.android.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Picker\\PickerAndroid.android.js";
   var _components = {
     PickerAndroid: {
       displayName: "PickerAndroid"
@@ -69829,7 +69829,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\ProgressViewIOS\\ProgressViewIOS.android.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\ProgressViewIOS\\ProgressViewIOS.android.js";
   var _components = {
     DummyProgressViewIOS: {
       displayName: "DummyProgressViewIOS"
@@ -69926,7 +69926,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\SegmentedControlIOS\\SegmentedControlIOS.android.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\SegmentedControlIOS\\SegmentedControlIOS.android.js";
   var _components = {
     DummySegmentedControlIOS: {
       displayName: "DummySegmentedControlIOS"
@@ -70011,7 +70011,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectWithoutProperties = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/objectWithoutProperties");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Slider\\Slider.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Slider\\Slider.js";
 
   var Platform = _$$_REQUIRE(_dependencyMap[2], "Platform");
 
@@ -70122,7 +70122,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Switch\\Switch.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\Switch\\Switch.js";
   var _components = {
     Switch: {
       displayName: "Switch"
@@ -70336,7 +70336,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Experimental\\SwipeableRow\\SwipeableFlatList.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Experimental\\SwipeableRow\\SwipeableFlatList.js";
   var _components = {
     SwipeableFlatList: {
       displayName: "SwipeableFlatList"
@@ -70520,7 +70520,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Experimental\\SwipeableRow\\SwipeableRow.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Experimental\\SwipeableRow\\SwipeableRow.js";
   var _components = {
     SwipeableRow: {
       displayName: "SwipeableRow"
@@ -71102,7 +71102,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Experimental\\SwipeableRow\\SwipeableListView.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Experimental\\SwipeableRow\\SwipeableListView.js";
   var _components = {
     SwipeableListView: {
       displayName: "SwipeableListView"
@@ -71396,7 +71396,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\TextInput\\TextInput.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\TextInput\\TextInput.js";
 
   var DeprecatedColorPropType = _$$_REQUIRE(_dependencyMap[7], "DeprecatedColorPropType");
 
@@ -72443,7 +72443,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\ToolbarAndroid\\ToolbarAndroid.android.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\ToolbarAndroid\\ToolbarAndroid.android.js";
   var _components = {
     ToolbarAndroid: {
       displayName: "ToolbarAndroid"
@@ -72605,7 +72605,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\ViewPager\\ViewPagerAndroid.android.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\ViewPager\\ViewPagerAndroid.android.js";
   var _components = {
     ViewPagerAndroid: {
       displayName: "ViewPagerAndroid"
@@ -72778,7 +72778,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactTransformHmrLibIndexJs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./../../../../react-transform-hmr/lib/index.js")).default;
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\WebView\\WebView.android.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Components\\WebView\\WebView.android.js";
   var _components = {
     WebView: {
       displayName: "WebView"
@@ -73507,7 +73507,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _PerformanceLogger = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "PerformanceLogger"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\ReactNative\\renderApplication.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\ReactNative\\renderApplication.js";
 
   var AppContainer = _$$_REQUIRE(_dependencyMap[3], "AppContainer");
 
@@ -73567,7 +73567,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\ReactNative\\ReactFabricIndicator.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\ReactNative\\ReactFabricIndicator.js";
 
   var React = _$$_REQUIRE(_dependencyMap[0], "React");
 
@@ -92770,7 +92770,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactNavigation = _$$_REQUIRE(_dependencyMap[10], "react-navigation");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\App.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\App.js";
   var _components = {
     LoginScreen: {
       displayName: "LoginScreen"
@@ -92819,12 +92819,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
       (0, _classCallCheck2.default)(this, LoginScreen);
       _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LoginScreen).call(this, props));
-      state = {
+      _this.state = {
         userName: " ",
-        password: " "
+        password: " ",
+        currency: " "
       };
-      _this.handlechange = _this.handlechange.bind((0, _assertThisInitialized2.default)(_this));
       _this.validateUser = _this.validateUser.bind((0, _assertThisInitialized2.default)(_this));
+      _this.registerUser = _this.registerUser.bind((0, _assertThisInitialized2.default)(_this));
       _this.users = [{
         userName: "aaa",
         passhash: "abc"
@@ -92836,8 +92837,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
 
     (0, _createClass2.default)(LoginScreen, [{
-      key: "handlechange",
-      value: function handlechange(value) {}
+      key: "registerUser",
+      value: function registerUser() {
+        console.log(this.state.userName);
+        console.log(this.state.password);
+        console.log(this.state.currency);
+      }
     }, {
       key: "validateUser",
       value: function validateUser() {
@@ -92876,13 +92881,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           style: styles.MainContiner,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 137
+            lineNumber: 154
           }
         }, _react.default.createElement(_reactNative.Text, {
           style: styles.Header,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 138
+            lineNumber: 155
           }
         }, "Home Screen"), _react.default.createElement(_reactNative.View, {
           style: {
@@ -92891,7 +92896,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 139
+            lineNumber: 156
           }
         }, _react.default.createElement(_reactNative.TextInput, {
           placeholder: "User Name",
@@ -92903,7 +92908,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 140
+            lineNumber: 157
           }
         }), _react.default.createElement(_reactNative.TextInput, {
           placeholder: "Password",
@@ -92915,19 +92920,19 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 142
+            lineNumber: 159
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 143
+            lineNumber: 160
           }
         }, " Login "), _react.default.createElement(_reactNative.TouchableOpacity, {
           style: styles.ButtonStlye,
           onPress: this.validateUser.bind(this),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 145
+            lineNumber: 162
           }
         }), _react.default.createElement(_reactNative.TouchableOpacity, {
           style: styles.ButtonStlye,
@@ -92941,12 +92946,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 151
+            lineNumber: 168
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 162
+            lineNumber: 179
           }
         }, " go to register ")));
       }
@@ -92959,15 +92964,67 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var RegisterScreen = function (_React$Component2) {
     (0, _inherits2.default)(RegisterScreen, _React$Component2);
 
-    function RegisterScreen() {
+    function RegisterScreen(props) {
+      var _this3;
+
       (0, _classCallCheck2.default)(this, RegisterScreen);
-      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RegisterScreen).apply(this, arguments));
+      _this3 = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RegisterScreen).call(this, props));
+      _this3.state = {
+        userName: " ",
+        password: " ",
+        currency: ''
+      };
+
+      _this3.updatecurrency = function (currency1) {
+        _this3.setState({
+          currency: currency1
+        });
+      };
+
+      _this3.registerUser = _this3.registerUser.bind((0, _assertThisInitialized2.default)(_this3));
+      _this3.users = [{
+        userName: "aaa",
+        passhash: "abc"
+      }, {
+        userName: "bb",
+        passhash: "123"
+      }];
+      return _this3;
     }
 
     (0, _createClass2.default)(RegisterScreen, [{
+      key: "registerUser",
+      value: function registerUser() {
+        console.log(this.state.userName);
+        console.log(this.state.password);
+        console.log(this.state.currency);
+        var newuser1 = this.state.userName;
+
+        if (this.state.userName == null || this.state.user == "") {
+          console.log('enter username');
+        } else if (this.state.password == null || this.state.password == "") {
+          console.log('enter username');
+        } else if (this.state.currency == null || this.state.currency == "") {
+          console.log('enter username');
+        } else {
+          var newuser = {
+            UserName1: this.state.userName,
+            Password: this.state.password,
+            Currency: this.state.currency
+          };
+
+          _reactNative.AsyncStorage.setItem(newuser1, JSON.stringify(newuser), function () {
+            _reactNative.AsyncStorage.getItem(newuser1, function (err, result) {
+              var Retval = JSON.parse(result);
+              console.log(Retval.UserName1);
+            });
+          });
+        }
+      }
+    }, {
       key: "render",
       value: function render() {
-        var _this3 = this;
+        var _this4 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -92977,91 +93034,88 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 175
+            lineNumber: 259
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 176
+            lineNumber: 260
           }
         }, "Register"), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 178
+            lineNumber: 262
           }
         }, "User Name:"), _react.default.createElement(_reactNative.TextInput, {
           placeholder: "User Name",
           id: "U1",
           onChangeText: function onChangeText(userName) {
-            _this3.setState({
+            _this4.setState({
               userName: userName
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 179
+            lineNumber: 263
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 181
+            lineNumber: 265
           }
         }, "Password:"), _react.default.createElement(_reactNative.TextInput, {
           placeholder: "Password",
           id: "P1",
           onChangeText: function onChangeText(password) {
-            _this3.setState({
+            _this4.setState({
               password: password
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 182
+            lineNumber: 266
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 184
+            lineNumber: 268
           }
         }, "Location:"), _react.default.createElement(_reactNative.Picker, {
           style: {
             height: 50,
             width: 100
           },
-          onValueChange: function onValueChange(itemValue, itemIndex) {
-            return _this3.setState({
-              language: itemValue
-            });
-          },
+          selectedValue: this.state.currency,
+          onValueChange: this.updatecurrency,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 185
+            lineNumber: 269
           }
         }, _react.default.createElement(_reactNative.Picker.Item, {
           label: "aud",
           value: "aud",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 191
+            lineNumber: 273
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "euro",
           value: "euro",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 192
+            lineNumber: 274
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "usd",
           value: "usd",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 193
+            lineNumber: 275
           }
         })), _react.default.createElement(_reactNative.Button, {
           title: "Back to Login ",
           onPress: function onPress() {
-            _this3.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this4.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Login'
@@ -93070,21 +93124,19 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 197
+            lineNumber: 279
           }
-        }), _react.default.createElement(_reactNative.Button, {
-          title: "Register ",
-          onPress: function onPress() {
-            _this3.props.navigation.dispatch(_reactNavigation.StackActions.reset({
-              index: 0,
-              actions: [_reactNavigation.NavigationActions.navigate({
-                routeName: 'Login'
-              })]
-            }));
-          },
+        }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 208
+            lineNumber: 292
+          }
+        }, " register "), _react.default.createElement(_reactNative.TouchableOpacity, {
+          style: styles.ButtonStlye,
+          onPress: this.registerUser.bind(this),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 294
           }
         }));
       }
@@ -93105,7 +93157,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _createClass2.default)(MainScreen, [{
       key: "render",
       value: function render() {
-        var _this4 = this;
+        var _this5 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93115,17 +93167,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 227
+            lineNumber: 315
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 228
+            lineNumber: 316
           }
         }, "Trade managment app"), _react.default.createElement(_reactNative.Button, {
           title: "crpyto market details ",
           onPress: function onPress() {
-            _this4.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this5.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'GeneralMarket'
@@ -93134,12 +93186,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 229
+            lineNumber: 317
           }
         }), _react.default.createElement(_reactNative.Button, {
           title: "watch crypto currencies ",
           onPress: function onPress() {
-            _this4.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this5.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'WatchMarket'
@@ -93148,12 +93200,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 240
+            lineNumber: 328
           }
         }), _react.default.createElement(_reactNative.Button, {
           title: "track youre investment",
           onPress: function onPress() {
-            _this4.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this5.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'InvTrack'
@@ -93162,12 +93214,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 251
+            lineNumber: 339
           }
         }), _react.default.createElement(_reactNative.Button, {
           title: "settings ",
           onPress: function onPress() {
-            _this4.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this5.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Settings'
@@ -93176,12 +93228,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 262
+            lineNumber: 350
           }
         }), _react.default.createElement(_reactNative.Button, {
           title: "Back to Login ",
           onPress: function onPress() {
-            _this4.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this5.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Login'
@@ -93190,7 +93242,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 273
+            lineNumber: 361
           }
         }));
       }
@@ -93211,7 +93263,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _createClass2.default)(SettingsScreen, [{
       key: "render",
       value: function render() {
-        var _this5 = this;
+        var _this6 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93221,17 +93273,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 291
+            lineNumber: 379
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 292
+            lineNumber: 380
           }
         }, "Settings"), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 295
+            lineNumber: 383
           }
         }, "Location"), _react.default.createElement(_reactNative.Picker, {
           style: {
@@ -93239,44 +93291,44 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
             width: 100
           },
           onValueChange: function onValueChange(itemValue, itemIndex) {
-            return _this5.setState({
+            return _this6.setState({
               language: itemValue
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 296
+            lineNumber: 384
           }
         }, _react.default.createElement(_reactNative.Picker.Item, {
           label: "aud",
           value: "aud",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 302
+            lineNumber: 390
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "euro",
           value: "euro",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 303
+            lineNumber: 391
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "usd",
           value: "usd",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 304
+            lineNumber: 392
           }
         })), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 309
+            lineNumber: 397
           }
         }, "notifications "), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 312
+            lineNumber: 400
           }
         }, "notification freqency"), _react.default.createElement(_reactNative.Picker, {
           style: {
@@ -93284,39 +93336,39 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
             width: 100
           },
           onValueChange: function onValueChange(itemValue, itemIndex) {
-            return _this5.setState({
+            return _this6.setState({
               language: itemValue
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 313
+            lineNumber: 401
           }
         }, _react.default.createElement(_reactNative.Picker.Item, {
           label: "aud",
           value: "aud",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 319
+            lineNumber: 407
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "euro",
           value: "euro",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 320
+            lineNumber: 408
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "usd",
           value: "usd",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 321
+            lineNumber: 409
           }
         })), _react.default.createElement(_reactNative.Button, {
           title: "Back to Login ",
           onPress: function onPress() {
-            _this5.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this6.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Login'
@@ -93325,7 +93377,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 325
+            lineNumber: 413
           }
         }));
       }
@@ -93346,7 +93398,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _createClass2.default)(GeneralScreen, [{
       key: "render",
       value: function render() {
-        var _this6 = this;
+        var _this7 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93356,17 +93408,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 343
+            lineNumber: 431
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 344
+            lineNumber: 432
           }
         }, "General market screen"), _react.default.createElement(_reactNative.Button, {
           title: "Back to main menu ",
           onPress: function onPress() {
-            _this6.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this7.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Main'
@@ -93375,7 +93427,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 345
+            lineNumber: 433
           }
         }));
       }
@@ -93396,7 +93448,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _createClass2.default)(WatchMScreen, [{
       key: "render",
       value: function render() {
-        var _this7 = this;
+        var _this8 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93406,17 +93458,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 363
+            lineNumber: 451
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 364
+            lineNumber: 452
           }
         }, "Watch market Screen"), _react.default.createElement(_reactNative.Button, {
           title: "Back to  main menu ",
           onPress: function onPress() {
-            _this7.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this8.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Main'
@@ -93425,7 +93477,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 365
+            lineNumber: 453
           }
         }));
       }
@@ -93446,7 +93498,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _createClass2.default)(TrackScreen, [{
       key: "render",
       value: function render() {
-        var _this8 = this;
+        var _this9 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93456,17 +93508,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 383
+            lineNumber: 471
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 384
+            lineNumber: 472
           }
         }, "Track youre investment Screen"), _react.default.createElement(_reactNative.Button, {
           title: "Back to Main menu ",
           onPress: function onPress() {
-            _this8.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this9.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Main'
@@ -93475,12 +93527,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 385
+            lineNumber: 473
           }
         }), _react.default.createElement(_reactNative.Button, {
           title: "add investment ",
           onPress: function onPress() {
-            _this8.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this9.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'AddInv'
@@ -93489,7 +93541,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 396
+            lineNumber: 484
           }
         }));
       }
@@ -93510,7 +93562,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _createClass2.default)(InvAddScreen, [{
       key: "render",
       value: function render() {
-        var _this9 = this;
+        var _this10 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93520,17 +93572,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 414
+            lineNumber: 502
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 415
+            lineNumber: 503
           }
         }, "Add Investment Screen"), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 420
+            lineNumber: 508
           }
         }, "currency type"), _react.default.createElement(_reactNative.Picker, {
           style: {
@@ -93538,78 +93590,78 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
             width: 100
           },
           onValueChange: function onValueChange(itemValue, itemIndex) {
-            return _this9.setState({
+            return _this10.setState({
               language: itemValue
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 422
+            lineNumber: 510
           }
         }, _react.default.createElement(_reactNative.Picker.Item, {
           label: "aud",
           value: "aud",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 428
+            lineNumber: 516
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "euro",
           value: "euro",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 429
+            lineNumber: 517
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "usd",
           value: "usd",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 430
+            lineNumber: 518
           }
         })), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 433
+            lineNumber: 521
           }
         }, "ammount of coins "), _react.default.createElement(_reactNative.TextInput, {
           placeholder: "Password",
           id: "P1",
           onChangeText: function onChangeText(password) {
-            return _this9.setState({
+            return _this10.setState({
               password: password
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 434
+            lineNumber: 522
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 436
+            lineNumber: 524
           }
         }, "purchase price"), _react.default.createElement(_reactNative.TextInput, {
           placeholder: "Password",
           id: "P1",
           onChangeText: function onChangeText(password) {
-            return _this9.setState({
+            return _this10.setState({
               password: password
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 437
+            lineNumber: 525
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 439
+            lineNumber: 527
           }
         }, "notifications "), _react.default.createElement(_reactNative.Button, {
           title: "Back to Main menu ",
           onPress: function onPress() {
-            _this9.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this10.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'InvTrack'
@@ -93618,12 +93670,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 448
+            lineNumber: 536
           }
         }), _react.default.createElement(_reactNative.Button, {
           title: "add investment ",
           onPress: function onPress() {
-            _this9.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this10.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'InvTrack'
@@ -93632,7 +93684,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 461
+            lineNumber: 549
           }
         }));
       }
@@ -94017,7 +94069,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _docsUrl = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[15], "./utils/docsUrl"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\@react-navigation\\native\\src\\createAppContainer.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\@react-navigation\\native\\src\\createAppContainer.js";
   var _components = {
     NavigationContainer: {
       displayName: "NavigationContainer",
@@ -98188,7 +98240,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactNative = _$$_REQUIRE(_dependencyMap[9], "react-native");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\@react-navigation\\native\\src\\createKeyboardAwareNavigator.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\@react-navigation\\native\\src\\createKeyboardAwareNavigator.js";
   var _components = {
     KeyboardAwareNavigator: {
       displayName: "KeyboardAwareNavigator",
@@ -98317,7 +98369,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _core = _$$_REQUIRE(_dependencyMap[10], "@react-navigation/core");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\@react-navigation\\native\\src\\createNavigationAwareScrollable.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\@react-navigation\\native\\src\\createNavigationAwareScrollable.js";
   var _components = {
     _component: {
       isInFunction: true
@@ -98538,7 +98590,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _hoistNonReactStatics = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10], "hoist-non-react-statics"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\@react-navigation\\native\\src\\withOrientation.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\@react-navigation\\native\\src\\withOrientation.js";
   var _components = {
     withOrientation: {
       displayName: "withOrientation",
@@ -98652,7 +98704,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _core = _$$_REQUIRE(_dependencyMap[11], "@react-navigation/core");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\@react-navigation\\native\\src\\ResourceSavingSceneView.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\@react-navigation\\native\\src\\ResourceSavingSceneView.js";
   var _components = {
     ResourceSavingSceneView: {
       displayName: "ResourceSavingSceneView"
@@ -98797,7 +98849,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _withOrientation = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[14], "./withOrientation"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-safe-area-view\\index.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-safe-area-view\\index.js";
   var _components = {
     SafeView: {
       displayName: "SafeView"
@@ -99376,7 +99428,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _hoistNonReactStatics = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11], "hoist-non-react-statics"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-safe-area-view\\withOrientation.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-safe-area-view\\withOrientation.js";
   var _components = {
     withOrientation: {
       displayName: "withOrientation",
@@ -99481,7 +99533,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _invariant = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./utils/invariant"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\@react-navigation\\native\\src\\Scrollables.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\@react-navigation\\native\\src\\Scrollables.js";
   var WrappedScrollView;
 
   if (_reactNative.Platform.OS === 'android') {
@@ -99642,7 +99694,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\Swipeable.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\Swipeable.js";
 
   var _components = {
     Swipeable: {
@@ -100148,7 +100200,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _NativeViewGestureHandler = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10], "./NativeViewGestureHandler"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\createNativeWrapper.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\createNativeWrapper.js";
   var _components = {
     ComponentWrapper: {
       displayName: "ComponentWrapper",
@@ -100867,7 +100919,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _hoistNonReactStatics = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11], "hoist-non-react-statics"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\gestureHandlerRootHOC.android.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\gestureHandlerRootHOC.android.js";
   var _components = {
     Wrapper: {
       displayName: "Wrapper",
@@ -101046,7 +101098,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _State = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[15], "./State"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\GestureButtons.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\GestureButtons.js";
   var _components = {
     BaseButton: {
       displayName: "BaseButton"
@@ -101298,7 +101350,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _createNativeWrapper = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "./createNativeWrapper"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\GestureComponents.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\GestureComponents.js";
   var MEMOIZED = {};
 
   function memoizeWrap(Component, config) {
@@ -101690,7 +101742,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\DrawerLayout.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\DrawerLayout.js";
 
   var _components = {
     DrawerLayout: {
@@ -102224,7 +102276,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\touchables\\TouchableNativeFeedback.android.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\touchables\\TouchableNativeFeedback.android.js";
 
   var _components = {
     TouchableNativeFeedback: {
@@ -102365,7 +102417,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\touchables\\GenericTouchable.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\touchables\\GenericTouchable.js";
 
   var _components = {
     GenericTouchable: {
@@ -102648,7 +102700,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "react"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\touchables\\TouchableWithoutFeedback.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\touchables\\TouchableWithoutFeedback.js";
 
   var TouchableWithoutFeedback = function TouchableWithoutFeedback(props) {
     return _react.default.createElement(_GenericTouchable.default, (0, _extends2.default)({}, props, {
@@ -102702,7 +102754,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\touchables\\TouchableOpacity.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\touchables\\TouchableOpacity.js";
 
   var _components = {
     TouchableOpacity: {
@@ -102839,7 +102891,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\touchables\\TouchableHighlight.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-gesture-handler\\touchables\\TouchableHighlight.js";
 
   var _components = {
     TouchableHighlight: {
@@ -104145,7 +104197,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _ReactNativeVersion = _$$_REQUIRE(_dependencyMap[11], "react-native/Libraries/Core/ReactNativeVersion");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-screens\\src\\screens.native.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-screens\\src\\screens.native.js";
   var _components = {
     Screen: {
       displayName: "Screen"
@@ -105881,7 +105933,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
 },658,[578,1,11,9,22,23,30,33,36,49,2,622],"node_modules\\react-navigation-stack\\lib\\module\\views\\BorderlessButton.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
-  module.exports = _$$_REQUIRE(_dependencyMap[0], "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Image\\AssetRegistry").registerAsset({
+  module.exports = _$$_REQUIRE(_dependencyMap[0], "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Image\\AssetRegistry").registerAsset({
     "__packager_asset": true,
     "httpServerLocation": "/assets/node_modules/react-navigation-stack/lib/module/views/assets",
     "width": 24,
@@ -106467,7 +106519,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   exports.default = _default;
 },663,[],"node_modules\\react-navigation-stack\\lib\\module\\utils\\getSceneIndicesForInterpolationInputRange.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
-  module.exports = _$$_REQUIRE(_dependencyMap[0], "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Image\\AssetRegistry").registerAsset({
+  module.exports = _$$_REQUIRE(_dependencyMap[0], "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native\\Libraries\\Image\\AssetRegistry").registerAsset({
     "__packager_asset": true,
     "httpServerLocation": "/assets/node_modules/react-navigation-stack/lib/module/views/assets",
     "width": 50,
@@ -107524,7 +107576,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _ResourceSavingScene = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[16], "../views/ResourceSavingScene"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\navigators\\createBottomTabNavigator.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\navigators\\createBottomTabNavigator.js";
   var _components = {
     TabNavigationView: {
       displayName: "TabNavigationView"
@@ -107836,7 +107888,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _core = _$$_REQUIRE(_dependencyMap[11], "@react-navigation/core");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\utils\\createTabNavigator.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\utils\\createTabNavigator.js";
   var _components = {
     NavigationView: {
       displayName: "NavigationView",
@@ -108142,7 +108194,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _withDimensions = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[13], "../utils/withDimensions"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\views\\BottomTabBar.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\views\\BottomTabBar.js";
   var _components = {
     TouchableWithoutFeedbackWrapper: {
       displayName: "TouchableWithoutFeedbackWrapper"
@@ -108623,7 +108675,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactNative = _$$_REQUIRE(_dependencyMap[8], "react-native");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\views\\CrossFadeIcon.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\views\\CrossFadeIcon.js";
   var _components = {
     TabBarIcon: {
       displayName: "TabBarIcon"
@@ -108747,7 +108799,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _hoistNonReactStatics = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11], "hoist-non-react-statics"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\utils\\withDimensions.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\utils\\withDimensions.js";
   var _components = {
     EnhancedComponent: {
       displayName: "EnhancedComponent",
@@ -108946,7 +108998,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactNativeScreens = _$$_REQUIRE(_dependencyMap[12], "react-native-screens");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\views\\ResourceSavingScene.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\views\\ResourceSavingScene.js";
   var _components = {
     ResourceSavingScene: {
       displayName: "ResourceSavingScene"
@@ -109082,7 +109134,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _ResourceSavingScene = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[17], "../views/ResourceSavingScene"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\navigators\\createMaterialTopTabNavigator.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\navigators\\createMaterialTopTabNavigator.js";
   var _components = {
     MaterialTabView: {
       displayName: "MaterialTabView"
@@ -109492,7 +109544,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\TabView.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\TabView.js";
 
   var _components = {
     TabView: {
@@ -109786,7 +109838,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\TabBar.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\TabBar.js";
 
   var _components = {
     TabBar: {
@@ -110402,7 +110454,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\TouchableItem.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\TouchableItem.js";
 
   var _components = {
     TouchableItem: {
@@ -110602,7 +110654,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\PagerAndroid.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\PagerAndroid.js";
 
   var _components = {
     PagerAndroid: {
@@ -110819,7 +110871,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\PagerScroll.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\PagerScroll.js";
 
   var _components = {
     PagerScroll: {
@@ -111064,7 +111116,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\PagerPan.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\PagerPan.js";
 
   var _components = {
     PagerPan: {
@@ -111345,7 +111397,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\PagerExperimental.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\PagerExperimental.js";
 
   var _components = {
     PagerExperimental: {
@@ -111590,7 +111642,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _index = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./../../react-transform-hmr/lib/index.js"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\SceneMap.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-native-tab-view\\src\\SceneMap.js";
   var _components = {
     SceneComponent: {
       displayName: "SceneComponent"
@@ -111687,7 +111739,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\views\\MaterialTopTabBar.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-navigation-tabs\\src\\views\\MaterialTopTabBar.js";
 
   var _components = {
     TabBarTop: {
@@ -111935,7 +111987,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _DrawerNavigatorItems = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "../views/DrawerNavigatorItems"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-navigation-drawer\\dist\\navigators\\createDrawerNavigator.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-navigation-drawer\\dist\\navigators\\createDrawerNavigator.js";
 
   var defaultContentComponent = function defaultContentComponent(props) {
     return _react.default.createElement(_reactNative.ScrollView, {
@@ -112278,7 +112330,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-navigation-drawer\\dist\\views\\DrawerView.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-navigation-drawer\\dist\\views\\DrawerView.js";
 
   var _components = {
     DrawerView: {
@@ -112595,7 +112647,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _invariant = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11], "../utils/invariant"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-navigation-drawer\\dist\\views\\DrawerSidebar.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-navigation-drawer\\dist\\views\\DrawerSidebar.js";
   var _components = {
     DrawerSidebar: {
       displayName: "DrawerSidebar"
@@ -112820,7 +112872,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactNativeScreens = _$$_REQUIRE(_dependencyMap[12], "react-native-screens");
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-navigation-drawer\\dist\\views\\ResourceSavingScene.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-navigation-drawer\\dist\\views\\ResourceSavingScene.js";
   var _components = {
     ResourceSavingScene: {
       displayName: "ResourceSavingScene"
@@ -112930,7 +112982,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _TouchableItem = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "./TouchableItem"));
 
-  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-navigation-drawer\\dist\\views\\DrawerNavigatorItems.js";
+  var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-navigation-drawer\\dist\\views\\DrawerNavigatorItems.js";
 
   var DrawerNavigatorItems = function DrawerNavigatorItems(_ref) {
     var items = _ref.items,
@@ -113075,7 +113127,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _class,
       _temp,
-      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\node_modules\\react-navigation-drawer\\dist\\views\\TouchableItem.js";
+      _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\node_modules\\react-navigation-drawer\\dist\\views\\TouchableItem.js";
 
   var _components = {
     TouchableItem: {

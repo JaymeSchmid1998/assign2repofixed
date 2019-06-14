@@ -9,18 +9,20 @@ import React from 'react';
 
 import { View, Text, TouchableOpacity, TextInput, Picker, Button, StyleSheet, style, br } from 'react-native';
 import { createAppContainer, createStackNavigator, StackActions, NavigationActions } from 'react-navigation';
+import {AsyncStorage} from 'react-native';
 
 class LoginScreen extends React.Component {
-
+  state = { userName: " ", password: " ",currency:" " };
   constructor(props) {
     //1
     super(props);
     //2
-    state = { userName: " ", password: " " };
+  
 
     //3
-    this.handlechange = this.handlechange.bind(this);
+   // this.handlechange = this.handlechange.bind(this);
     this.validateUser = this.validateUser.bind(this);
+    this.registerUser= this.registerUser.bind(this);
     //4:user  data 
 
 
@@ -32,18 +34,33 @@ class LoginScreen extends React.Component {
 
   }
 
-  //on change listener 
-  handlechange(value) {
+  registerUser(){
 
-    //this.setState({"userName":value});
+    console.log(this.state.userName);
+    console.log(this.state.password);
+    console.log(this.state.currency);
+
+/*
+let newuser= this.state.userName;
 
 
-    /* if(e.target.id==="U1"){
-       this.setState({"userName":""});
-     }
-     else if(e.target.id==="P1"){
-       this.setState({"password":e.target.value});
-     }*/
+
+    let newuser = {
+      UserName1:this.state.userName,
+      Password: this.state.password,
+      Currency:this.state.currency,
+   
+      
+    };
+    AsyncStorage.setItem(newuser, JSON.stringify(UID123_object), () => {
+      // AsyncStorage.mergeItem(newuser, JSON.stringify(UID123_delta), () => {
+         AsyncStorage.getItem(newuser, (err, result) => {
+           console.log(result);
+         });
+       });*/
+     
+
+
   }
 
   validateUser() {
@@ -170,6 +187,73 @@ console.log("invalid username");
   }
 }
 class RegisterScreen extends React.Component {
+  state = { userName: " ", password: " ",currency:'' };  constructor(props) {
+    //1
+    super(props);
+    //2
+   
+
+    //3
+   // this.handlechange = this.handlechange.bind(this);
+    //this.validateUser = this.validateUser.bind(this);
+    this.registerUser= this.registerUser.bind(this);
+    //4:user  data 
+
+
+
+    this.users = [
+      { userName: "aaa", passhash: "abc" },
+      { userName: "bb", passhash: "123" }
+    ];
+
+  }
+
+
+  updatecurrency = (currency1) => {
+    this.setState({ currency: currency1 })
+ }
+
+  registerUser(){
+
+    console.log(this.state.userName);
+    console.log(this.state.password);
+    console.log(this.state.currency);
+
+
+let newuser1= this.state.userName;
+
+
+if(this.state.userName==null || this.state.user==""){
+  console.log('enter username');
+}
+else if(this.state.password==null || this.state.password==""){
+  console.log('enter username');
+}
+else if(this.state.currency==null || this.state.currency==""){
+  console.log('enter username');
+}
+else{
+    let newuser = {
+      UserName1:this.state.userName,
+      Password: this.state.password,
+      Currency:this.state.currency,
+   
+      
+    };
+    AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+      //AsyncStorage.mergeItem(newuser, JSON.stringify(UID123_delta), () => {
+         AsyncStorage.getItem(newuser1, (err, result) => {
+           let Retval=JSON.parse(result);
+           console.log(Retval.UserName1);
+         });
+       });
+     
+      }
+
+  }
+
+
+
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -183,11 +267,9 @@ class RegisterScreen extends React.Component {
 
         <Text>Location:</Text>
         <Picker
-          //selectedValue={this.state.language}
+         
           style={{ height: 50, width: 100 }}
-          onValueChange={(itemValue, itemIndex) =>
-            this.setState({ language: itemValue })
-          }>
+          selectedValue= {this.state.currency} onValueChange={this.updatecurrency} >
           <Picker.Item label="aud" value="aud" />
           <Picker.Item label="euro" value="euro" />
           <Picker.Item label="usd" value="usd" />
@@ -205,17 +287,23 @@ class RegisterScreen extends React.Component {
             }))
           }}
         />
-        <Button
-          title="Register "
-          onPress={() => {
-            this.props.navigation.dispatch(StackActions.reset({
-              index: 0,
-              actions: [
-                NavigationActions.navigate({ routeName: 'Login' })
-              ],
-            }))
-          }}
-        />
+       
+
+<Text> register </Text>
+
+          <TouchableOpacity
+            style={styles.ButtonStlye}
+            onPress={this.registerUser.bind(this)}
+
+          /> 
+
+
+
+
+
+
+
+
       </View>
     );
   }
