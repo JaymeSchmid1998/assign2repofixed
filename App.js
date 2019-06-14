@@ -9,20 +9,20 @@ import React from 'react';
 
 import { View, Text, TouchableOpacity, TextInput, Picker, Button, StyleSheet, style, br } from 'react-native';
 import { createAppContainer, createStackNavigator, StackActions, NavigationActions } from 'react-navigation';
-import {AsyncStorage} from 'react-native';
+import { AsyncStorage } from 'react-native';
 
 class LoginScreen extends React.Component {
-  state = { userName: " ", password: " ",currency:" " };
+  state = { userName: " ", password: " ", currency: " " };
   constructor(props) {
     //1
     super(props);
     //2
-  
+
 
     //3
-   // this.handlechange = this.handlechange.bind(this);
+    // this.handlechange = this.handlechange.bind(this);
     this.validateUser = this.validateUser.bind(this);
-    this.registerUser= this.registerUser.bind(this);
+    this.registerUser = this.registerUser.bind(this);
     //4:user  data 
 
 
@@ -34,31 +34,31 @@ class LoginScreen extends React.Component {
 
   }
 
-  registerUser(){
+  registerUser() {
 
     console.log(this.state.userName);
     console.log(this.state.password);
     console.log(this.state.currency);
 
-/*
-let newuser= this.state.userName;
+    /*
+    let newuser= this.state.userName;
+    
+    
+    
+        let newuser = {
+          UserName1:this.state.userName,
+          Password: this.state.password,
+          Currency:this.state.currency,
+       
+          
+        };
+        AsyncStorage.setItem(newuser, JSON.stringify(UID123_object), () => {
+          // AsyncStorage.mergeItem(newuser, JSON.stringify(UID123_delta), () => {
+             AsyncStorage.getItem(newuser, (err, result) => {
+               console.log(result);
+             });
+           });*/
 
-
-
-    let newuser = {
-      UserName1:this.state.userName,
-      Password: this.state.password,
-      Currency:this.state.currency,
-   
-      
-    };
-    AsyncStorage.setItem(newuser, JSON.stringify(UID123_object), () => {
-      // AsyncStorage.mergeItem(newuser, JSON.stringify(UID123_delta), () => {
-         AsyncStorage.getItem(newuser, (err, result) => {
-           console.log(result);
-         });
-       });*/
-     
 
 
   }
@@ -73,74 +73,117 @@ let newuser= this.state.userName;
       },
       
     )*/
-   // console.log(this.state.userName);
+    // console.log(this.state.userName);
     //console.log(this.state.password);
-    try{
-if(Object.keys(this.state.userName).length==0) {
-console.log("username is blank "); 
-}
-else  if(Object.keys(this.state.password).length==0) {
-  console.log("password  is blank "); 
-  }
 
-else if( this.state.userName=="A1"){
-console.log("valid username")
-if(this.state.password=="A2"){
-console.log("valid  password ");
-this.props.navigation.dispatch(StackActions.reset({
-  index: 0,
-  actions: [
-    NavigationActions.navigate({ routeName: 'Main' })
-  ],
-}))
-}
-else{
-  console.log( "invalid password");
-}
-}
-else{
-console.log("invalid username");
-}
+    console.log(this.state.userName);
+    console.log(this.state.password);
+    console.log(this.state.currency);
+
+
+    let newuser1 = this.state.userName;
+
+
+    if (this.state.userName == null || this.state.user == "") {
+      console.log('enter username');
     }
-    catch(e){
-      console.log(e); 
+    else if (this.state.password == null || this.state.password == "") {
+      console.log('enter password');
     }
+    else {
+
+      try {
+        AsyncStorage.getItem(newuser1, (err, result) => {
+          let Retval = JSON.parse(result);
+          console.log("username");
+          console.log(result);
+          if (this.state.userName == Retval.UserName1) {
+            console.log("valid username")
+            console.log(this.state.Password);
+console.log(Retval.password);
+            if (this.state.password == Retval.Password) {
+              console.log("valid  password ");
+              this.props.navigation.dispatch(StackActions.reset({
+                index: 0,
+                actions: [
+                  NavigationActions.navigate({ routeName: 'Main' })
+                ],
+              }))
+            }
+            else {
+              console.log("invalid password");
+            }
+          }
+          else {
+            console.log("invalid username");
+          }
 
 
 
-    /*
+
+        });
+       
 
 
-
-    this.props.navigation.dispatch(StackActions.reset({
-      index: 0,
-      actions: [
-        NavigationActions.navigate({ routeName: 'Main' })
-      ],
-    }))
-
-
-    if ("a" === this.setState.userName) {
-
-    }*/
-
-
-    /*
-     console.log("xxxx",this.state.userName);
     
-    
-    let isuservalid= false; 
-    this.users.forEach(users =>{
-    
-    
-    if(users.userName===this.setState.userName&& users.passhash===this.state.password){
-      isuservalid= true;
-      console.log("user is valid ");
-    
+        
+      }
+      catch (e) {
+        console.log(e);
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /*
+  
+  
+  
+      this.props.navigation.dispatch(StackActions.reset({
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: 'Main' })
+        ],
+      }))
+  
+  
+      if ("a" === this.setState.userName) {
+  
+      }*/
+
+
+      /*
+       console.log("xxxx",this.state.userName);
+      
+      
+      let isuservalid= false; 
+      this.users.forEach(users =>{
+      
+      
+      if(users.userName===this.setState.userName&& users.passhash===this.state.password){
+        isuservalid= true;
+        console.log("user is valid ");
+      
+      }
+      els
+      */
     }
-    els
-    */
-
 
 
   }
@@ -163,7 +206,7 @@ console.log("invalid username");
             style={styles.ButtonStlye}
             onPress={this.validateUser.bind(this)}
 
-          /> 
+          />
 
           <TouchableOpacity
 
@@ -176,27 +219,27 @@ console.log("invalid username");
                 ],
               }))
             }}
-          /><Text > go to register </Text> 
+          /><Text > go to register </Text>
 
 
 
-          
+
         </View>
       </View>
     );
   }
 }
 class RegisterScreen extends React.Component {
-  state = { userName: " ", password: " ",currency:'' };  constructor(props) {
+  state = { userName: " ", password: " ", currency: '' }; constructor(props) {
     //1
     super(props);
     //2
-   
+
 
     //3
-   // this.handlechange = this.handlechange.bind(this);
+    // this.handlechange = this.handlechange.bind(this);
     //this.validateUser = this.validateUser.bind(this);
-    this.registerUser= this.registerUser.bind(this);
+    this.registerUser = this.registerUser.bind(this);
     //4:user  data 
 
 
@@ -211,44 +254,44 @@ class RegisterScreen extends React.Component {
 
   updatecurrency = (currency1) => {
     this.setState({ currency: currency1 })
- }
+  }
 
-  registerUser(){
+  registerUser() {
 
     console.log(this.state.userName);
     console.log(this.state.password);
     console.log(this.state.currency);
 
 
-let newuser1= this.state.userName;
+    let newuser1 = this.state.userName;
 
 
-if(this.state.userName==null || this.state.user==""){
-  console.log('enter username');
-}
-else if(this.state.password==null || this.state.password==""){
-  console.log('enter username');
-}
-else if(this.state.currency==null || this.state.currency==""){
-  console.log('enter username');
-}
-else{
-    let newuser = {
-      UserName1:this.state.userName,
-      Password: this.state.password,
-      Currency:this.state.currency,
-   
-      
-    };
-    AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
-      //AsyncStorage.mergeItem(newuser, JSON.stringify(UID123_delta), () => {
-         AsyncStorage.getItem(newuser1, (err, result) => {
-           let Retval=JSON.parse(result);
-           console.log(Retval.UserName1);
-         });
-       });
-     
-      }
+    if (this.state.userName == null || this.state.user == "") {
+      console.log('enter username');
+    }
+    else if (this.state.password == null || this.state.password == "") {
+      console.log('enter username');
+    }
+    else if (this.state.currency == null || this.state.currency == "") {
+      console.log('enter username');
+    }
+    else {
+      let newuser = {
+        UserName1: this.state.userName,
+        Password: this.state.password,
+        Currency: this.state.currency,
+
+
+      };
+      AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+        //AsyncStorage.mergeItem(newuser, JSON.stringify(UID123_delta), () => {
+        AsyncStorage.getItem(newuser1, (err, result) => {
+          let Retval = JSON.parse(result);
+          console.log(Retval.UserName1);
+        });
+      });
+
+    }
 
   }
 
@@ -260,16 +303,16 @@ else{
         <Text>Register</Text>
 
         <Text>User Name:</Text>
-        <TextInput placeholder="User Name" id="U1" onChangeText={(userName => { this.setState({userName}); })} />
+        <TextInput placeholder="User Name" id="U1" onChangeText={(userName => { this.setState({ userName }); })} />
 
         <Text>Password:</Text>
-        <TextInput placeholder="Password" id="P1" onChangeText={(password => { this.setState({password}); })} />
+        <TextInput placeholder="Password" id="P1" onChangeText={(password => { this.setState({ password }); })} />
 
         <Text>Location:</Text>
         <Picker
-         
+
           style={{ height: 50, width: 100 }}
-          selectedValue= {this.state.currency} onValueChange={this.updatecurrency} >
+          selectedValue={this.state.currency} onValueChange={this.updatecurrency} >
           <Picker.Item label="aud" value="aud" />
           <Picker.Item label="euro" value="euro" />
           <Picker.Item label="usd" value="usd" />
@@ -287,15 +330,15 @@ else{
             }))
           }}
         />
-       
 
-<Text> register </Text>
 
-          <TouchableOpacity
-            style={styles.ButtonStlye}
-            onPress={this.registerUser.bind(this)}
+        <Text> register </Text>
 
-          /> 
+        <TouchableOpacity
+          style={styles.ButtonStlye}
+          onPress={this.registerUser.bind(this)}
+
+        />
 
 
 

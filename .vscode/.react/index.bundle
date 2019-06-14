@@ -92846,48 +92846,66 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }, {
       key: "validateUser",
       value: function validateUser() {
-        try {
-          if (Object.keys(this.state.userName).length == 0) {
-            console.log("username is blank ");
-          } else if (Object.keys(this.state.password).length == 0) {
-            console.log("password  is blank ");
-          } else if (this.state.userName == "A1") {
-            console.log("valid username");
+        var _this2 = this;
 
-            if (this.state.password == "A2") {
-              console.log("valid  password ");
-              this.props.navigation.dispatch(_reactNavigation.StackActions.reset({
-                index: 0,
-                actions: [_reactNavigation.NavigationActions.navigate({
-                  routeName: 'Main'
-                })]
-              }));
-            } else {
-              console.log("invalid password");
-            }
-          } else {
-            console.log("invalid username");
+        console.log(this.state.userName);
+        console.log(this.state.password);
+        console.log(this.state.currency);
+        var newuser1 = this.state.userName;
+
+        if (this.state.userName == null || this.state.user == "") {
+          console.log('enter username');
+        } else if (this.state.password == null || this.state.password == "") {
+          console.log('enter password');
+        } else {
+          try {
+            _reactNative.AsyncStorage.getItem(newuser1, function (err, result) {
+              var Retval = JSON.parse(result);
+              console.log("username");
+              console.log(result);
+
+              if (_this2.state.userName == Retval.UserName1) {
+                console.log("valid username");
+                console.log(_this2.state.Password);
+                console.log(Retval.password);
+
+                if (_this2.state.password == Retval.Password) {
+                  console.log("valid  password ");
+
+                  _this2.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+                    index: 0,
+                    actions: [_reactNavigation.NavigationActions.navigate({
+                      routeName: 'Main'
+                    })]
+                  }));
+                } else {
+                  console.log("invalid password");
+                }
+              } else {
+                console.log("invalid username");
+              }
+            });
+          } catch (e) {
+            console.log(e);
           }
-        } catch (e) {
-          console.log(e);
         }
       }
     }, {
       key: "render",
       value: function render() {
-        var _this2 = this;
+        var _this3 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: styles.MainContiner,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 154
+            lineNumber: 197
           }
         }, _react.default.createElement(_reactNative.Text, {
           style: styles.Header,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 155
+            lineNumber: 198
           }
         }, "Home Screen"), _react.default.createElement(_reactNative.View, {
           style: {
@@ -92896,48 +92914,48 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 156
+            lineNumber: 199
           }
         }, _react.default.createElement(_reactNative.TextInput, {
           placeholder: "User Name",
           id: "U1",
           onChangeText: function onChangeText(userName) {
-            return _this2.setState({
+            return _this3.setState({
               userName: userName
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 157
+            lineNumber: 200
           }
         }), _react.default.createElement(_reactNative.TextInput, {
           placeholder: "Password",
           id: "P1",
           onChangeText: function onChangeText(password) {
-            return _this2.setState({
+            return _this3.setState({
               password: password
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 159
+            lineNumber: 202
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 160
+            lineNumber: 203
           }
         }, " Login "), _react.default.createElement(_reactNative.TouchableOpacity, {
           style: styles.ButtonStlye,
           onPress: this.validateUser.bind(this),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 162
+            lineNumber: 205
           }
         }), _react.default.createElement(_reactNative.TouchableOpacity, {
           style: styles.ButtonStlye,
           onPress: function onPress() {
-            _this2.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this3.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Register'
@@ -92946,12 +92964,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 168
+            lineNumber: 211
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 179
+            lineNumber: 222
           }
         }, " go to register ")));
       }
@@ -92965,31 +92983,31 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _inherits2.default)(RegisterScreen, _React$Component2);
 
     function RegisterScreen(props) {
-      var _this3;
+      var _this4;
 
       (0, _classCallCheck2.default)(this, RegisterScreen);
-      _this3 = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RegisterScreen).call(this, props));
-      _this3.state = {
+      _this4 = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RegisterScreen).call(this, props));
+      _this4.state = {
         userName: " ",
         password: " ",
         currency: ''
       };
 
-      _this3.updatecurrency = function (currency1) {
-        _this3.setState({
+      _this4.updatecurrency = function (currency1) {
+        _this4.setState({
           currency: currency1
         });
       };
 
-      _this3.registerUser = _this3.registerUser.bind((0, _assertThisInitialized2.default)(_this3));
-      _this3.users = [{
+      _this4.registerUser = _this4.registerUser.bind((0, _assertThisInitialized2.default)(_this4));
+      _this4.users = [{
         userName: "aaa",
         passhash: "abc"
       }, {
         userName: "bb",
         passhash: "123"
       }];
-      return _this3;
+      return _this4;
     }
 
     (0, _createClass2.default)(RegisterScreen, [{
@@ -93024,7 +93042,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }, {
       key: "render",
       value: function render() {
-        var _this4 = this;
+        var _this5 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93034,51 +93052,51 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 259
+            lineNumber: 302
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 260
+            lineNumber: 303
           }
         }, "Register"), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 262
+            lineNumber: 305
           }
         }, "User Name:"), _react.default.createElement(_reactNative.TextInput, {
           placeholder: "User Name",
           id: "U1",
           onChangeText: function onChangeText(userName) {
-            _this4.setState({
+            _this5.setState({
               userName: userName
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 263
+            lineNumber: 306
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 265
+            lineNumber: 308
           }
         }, "Password:"), _react.default.createElement(_reactNative.TextInput, {
           placeholder: "Password",
           id: "P1",
           onChangeText: function onChangeText(password) {
-            _this4.setState({
+            _this5.setState({
               password: password
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 266
+            lineNumber: 309
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 268
+            lineNumber: 311
           }
         }, "Location:"), _react.default.createElement(_reactNative.Picker, {
           style: {
@@ -93089,33 +93107,33 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           onValueChange: this.updatecurrency,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 269
+            lineNumber: 312
           }
         }, _react.default.createElement(_reactNative.Picker.Item, {
           label: "aud",
           value: "aud",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 273
+            lineNumber: 316
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "euro",
           value: "euro",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 274
+            lineNumber: 317
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "usd",
           value: "usd",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 275
+            lineNumber: 318
           }
         })), _react.default.createElement(_reactNative.Button, {
           title: "Back to Login ",
           onPress: function onPress() {
-            _this4.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this5.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Login'
@@ -93124,19 +93142,19 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 279
+            lineNumber: 322
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 292
+            lineNumber: 335
           }
         }, " register "), _react.default.createElement(_reactNative.TouchableOpacity, {
           style: styles.ButtonStlye,
           onPress: this.registerUser.bind(this),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 294
+            lineNumber: 337
           }
         }));
       }
@@ -93157,7 +93175,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _createClass2.default)(MainScreen, [{
       key: "render",
       value: function render() {
-        var _this5 = this;
+        var _this6 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93167,17 +93185,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 315
+            lineNumber: 358
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 316
+            lineNumber: 359
           }
         }, "Trade managment app"), _react.default.createElement(_reactNative.Button, {
           title: "crpyto market details ",
           onPress: function onPress() {
-            _this5.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this6.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'GeneralMarket'
@@ -93186,12 +93204,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 317
+            lineNumber: 360
           }
         }), _react.default.createElement(_reactNative.Button, {
           title: "watch crypto currencies ",
           onPress: function onPress() {
-            _this5.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this6.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'WatchMarket'
@@ -93200,12 +93218,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 328
+            lineNumber: 371
           }
         }), _react.default.createElement(_reactNative.Button, {
           title: "track youre investment",
           onPress: function onPress() {
-            _this5.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this6.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'InvTrack'
@@ -93214,12 +93232,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 339
+            lineNumber: 382
           }
         }), _react.default.createElement(_reactNative.Button, {
           title: "settings ",
           onPress: function onPress() {
-            _this5.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this6.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Settings'
@@ -93228,12 +93246,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 350
+            lineNumber: 393
           }
         }), _react.default.createElement(_reactNative.Button, {
           title: "Back to Login ",
           onPress: function onPress() {
-            _this5.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this6.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Login'
@@ -93242,7 +93260,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 361
+            lineNumber: 404
           }
         }));
       }
@@ -93263,7 +93281,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _createClass2.default)(SettingsScreen, [{
       key: "render",
       value: function render() {
-        var _this6 = this;
+        var _this7 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93273,17 +93291,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 379
+            lineNumber: 422
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 380
+            lineNumber: 423
           }
         }, "Settings"), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 383
+            lineNumber: 426
           }
         }, "Location"), _react.default.createElement(_reactNative.Picker, {
           style: {
@@ -93291,44 +93309,44 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
             width: 100
           },
           onValueChange: function onValueChange(itemValue, itemIndex) {
-            return _this6.setState({
+            return _this7.setState({
               language: itemValue
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 384
+            lineNumber: 427
           }
         }, _react.default.createElement(_reactNative.Picker.Item, {
           label: "aud",
           value: "aud",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 390
+            lineNumber: 433
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "euro",
           value: "euro",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 391
+            lineNumber: 434
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "usd",
           value: "usd",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 392
+            lineNumber: 435
           }
         })), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 397
+            lineNumber: 440
           }
         }, "notifications "), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 400
+            lineNumber: 443
           }
         }, "notification freqency"), _react.default.createElement(_reactNative.Picker, {
           style: {
@@ -93336,39 +93354,39 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
             width: 100
           },
           onValueChange: function onValueChange(itemValue, itemIndex) {
-            return _this6.setState({
+            return _this7.setState({
               language: itemValue
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 401
+            lineNumber: 444
           }
         }, _react.default.createElement(_reactNative.Picker.Item, {
           label: "aud",
           value: "aud",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 407
+            lineNumber: 450
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "euro",
           value: "euro",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 408
+            lineNumber: 451
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "usd",
           value: "usd",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 409
+            lineNumber: 452
           }
         })), _react.default.createElement(_reactNative.Button, {
           title: "Back to Login ",
           onPress: function onPress() {
-            _this6.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this7.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Login'
@@ -93377,7 +93395,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 413
+            lineNumber: 456
           }
         }));
       }
@@ -93398,7 +93416,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _createClass2.default)(GeneralScreen, [{
       key: "render",
       value: function render() {
-        var _this7 = this;
+        var _this8 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93408,17 +93426,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 431
+            lineNumber: 474
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 432
+            lineNumber: 475
           }
         }, "General market screen"), _react.default.createElement(_reactNative.Button, {
           title: "Back to main menu ",
           onPress: function onPress() {
-            _this7.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this8.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Main'
@@ -93427,7 +93445,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 433
+            lineNumber: 476
           }
         }));
       }
@@ -93448,7 +93466,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _createClass2.default)(WatchMScreen, [{
       key: "render",
       value: function render() {
-        var _this8 = this;
+        var _this9 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93458,17 +93476,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 451
+            lineNumber: 494
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 452
+            lineNumber: 495
           }
         }, "Watch market Screen"), _react.default.createElement(_reactNative.Button, {
           title: "Back to  main menu ",
           onPress: function onPress() {
-            _this8.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this9.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Main'
@@ -93477,7 +93495,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 453
+            lineNumber: 496
           }
         }));
       }
@@ -93498,7 +93516,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _createClass2.default)(TrackScreen, [{
       key: "render",
       value: function render() {
-        var _this9 = this;
+        var _this10 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93508,17 +93526,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 471
+            lineNumber: 514
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 472
+            lineNumber: 515
           }
         }, "Track youre investment Screen"), _react.default.createElement(_reactNative.Button, {
           title: "Back to Main menu ",
           onPress: function onPress() {
-            _this9.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this10.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Main'
@@ -93527,12 +93545,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 473
+            lineNumber: 516
           }
         }), _react.default.createElement(_reactNative.Button, {
           title: "add investment ",
           onPress: function onPress() {
-            _this9.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this10.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'AddInv'
@@ -93541,7 +93559,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 484
+            lineNumber: 527
           }
         }));
       }
@@ -93562,7 +93580,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _createClass2.default)(InvAddScreen, [{
       key: "render",
       value: function render() {
-        var _this10 = this;
+        var _this11 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93572,17 +93590,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 502
+            lineNumber: 545
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 503
+            lineNumber: 546
           }
         }, "Add Investment Screen"), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 508
+            lineNumber: 551
           }
         }, "currency type"), _react.default.createElement(_reactNative.Picker, {
           style: {
@@ -93590,78 +93608,78 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
             width: 100
           },
           onValueChange: function onValueChange(itemValue, itemIndex) {
-            return _this10.setState({
+            return _this11.setState({
               language: itemValue
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 510
+            lineNumber: 553
           }
         }, _react.default.createElement(_reactNative.Picker.Item, {
           label: "aud",
           value: "aud",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 516
+            lineNumber: 559
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "euro",
           value: "euro",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 517
+            lineNumber: 560
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "usd",
           value: "usd",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 518
+            lineNumber: 561
           }
         })), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 521
+            lineNumber: 564
           }
         }, "ammount of coins "), _react.default.createElement(_reactNative.TextInput, {
           placeholder: "Password",
           id: "P1",
           onChangeText: function onChangeText(password) {
-            return _this10.setState({
+            return _this11.setState({
               password: password
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 522
+            lineNumber: 565
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 524
+            lineNumber: 567
           }
         }, "purchase price"), _react.default.createElement(_reactNative.TextInput, {
           placeholder: "Password",
           id: "P1",
           onChangeText: function onChangeText(password) {
-            return _this10.setState({
+            return _this11.setState({
               password: password
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 525
+            lineNumber: 568
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 527
+            lineNumber: 570
           }
         }, "notifications "), _react.default.createElement(_reactNative.Button, {
           title: "Back to Main menu ",
           onPress: function onPress() {
-            _this10.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this11.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'InvTrack'
@@ -93670,12 +93688,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 536
+            lineNumber: 579
           }
         }), _react.default.createElement(_reactNative.Button, {
           title: "add investment ",
           onPress: function onPress() {
-            _this10.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this11.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'InvTrack'
@@ -93684,7 +93702,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 549
+            lineNumber: 592
           }
         }));
       }
