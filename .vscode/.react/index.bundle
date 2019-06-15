@@ -1387,7 +1387,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   _reactNative.AppRegistry.registerComponent(_app.name, function () {
     return _App.default;
   });
-},0,[1,2,569,706],"index.js");
+},0,[1,2,569,710],"index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -92756,7 +92756,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "@babel/runtime/helpers/possibleConstructorReturn"));
 
-  var _getPrototypeOf2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/getPrototypeOf"));
+  var _getPrototypeOf3 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/getPrototypeOf"));
 
   var _assertThisInitialized2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/assertThisInitialized"));
 
@@ -92769,6 +92769,8 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _reactNative = _$$_REQUIRE(_dependencyMap[9], "react-native");
 
   var _reactNavigation = _$$_REQUIRE(_dependencyMap[10], "react-navigation");
+
+  var _types = _$$_REQUIRE(_dependencyMap[11], "@jest/types");
 
   var _jsxFileName = "c:\\Users\\zbook j\\Desktop\\3rd year assignments sem 1\\cross platform apps\\fixedReactAssignment2\\FixedAssign2\\FixedAssign2\\App.js";
   var _components = {
@@ -92818,7 +92820,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       var _this;
 
       (0, _classCallCheck2.default)(this, LoginScreen);
-      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LoginScreen).call(this, props));
+      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(LoginScreen).call(this, props));
       _this.state = {
         userName: " ",
         password: " ",
@@ -92826,6 +92828,9 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       };
       _this.validateUser = _this.validateUser.bind((0, _assertThisInitialized2.default)(_this));
       _this.registerUser = _this.registerUser.bind((0, _assertThisInitialized2.default)(_this));
+      global.UserNameglobal = '';
+      global.passwordglobal = '';
+      global.currencyglobal = '';
       _this.users = [{
         userName: "aaa",
         passhash: "abc"
@@ -92848,46 +92853,59 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       value: function validateUser() {
         var _this2 = this;
 
-        console.log(this.state.userName);
-        console.log(this.state.password);
-        console.log(this.state.currency);
-        var newuser1 = this.state.userName;
+        try {
+          var newuser1 = this.state.userName;
 
-        if (this.state.userName == null || this.state.user == "") {
-          console.log('enter username');
-        } else if (this.state.password == null || this.state.password == "") {
-          console.log('enter password');
-        } else {
+          if (this.state.userName == null || this.state.user == "") {
+            console.log('enter username');
+          }
+
           try {
-            _reactNative.AsyncStorage.getItem(newuser1, function (err, result) {
-              var Retval = JSON.parse(result);
-              console.log("username");
-              console.log(result);
+            if (this.state.password == null || this.state.password == "") {
+              console.log('enter password');
+            }
 
-              if (_this2.state.userName == Retval.UserName1) {
-                console.log("valid username");
-                console.log(_this2.state.Password);
-                console.log(Retval.password);
+            try {
+              _reactNative.AsyncStorage.getItem(newuser1, function (err, result) {
+                var Retval = JSON.parse(result);
+                console.log("username");
+                console.log(result);
 
-                if (_this2.state.password == Retval.Password) {
-                  console.log("valid  password ");
+                if (_this2.state.userName == Retval.UserName1) {
+                  console.log("valid username");
 
-                  _this2.props.navigation.dispatch(_reactNavigation.StackActions.reset({
-                    index: 0,
-                    actions: [_reactNavigation.NavigationActions.navigate({
-                      routeName: 'Main'
-                    })]
-                  }));
+                  if (_this2.state.password == Retval.Password) {
+                    global.passwordglobal = Retval.Password;
+                    global.UserNameglobal = Retval.UserName1;
+                    global.currencyglobal = Retval.Currency;
+                    console.log(passwordglobal);
+                    console.log(UserNameglobal);
+                    console.log(currencyglobal);
+                    console.log("valid  password ");
+
+                    _this2.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+                      index: 0,
+                      actions: [_reactNavigation.NavigationActions.navigate({
+                        routeName: 'Main'
+                      })]
+                    }));
+                  } else {
+                    console.log("invalid password");
+                  }
                 } else {
-                  console.log("invalid password");
+                  console.log("invalid username");
                 }
-              } else {
-                console.log("invalid username");
-              }
-            });
+              });
+            } catch (e) {
+              console.log(e);
+            }
           } catch (e) {
             console.log(e);
+            console.log(" password is null");
           }
+        } catch (e) {
+          console.log(e);
+          console.log("username  is null");
         }
       }
     }, {
@@ -92899,13 +92917,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           style: styles.MainContiner,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 197
+            lineNumber: 163
           }
         }, _react.default.createElement(_reactNative.Text, {
           style: styles.Header,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 198
+            lineNumber: 165
           }
         }, "Home Screen"), _react.default.createElement(_reactNative.View, {
           style: {
@@ -92914,7 +92932,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 199
+            lineNumber: 166
+          }
+        }, _react.default.createElement(_reactNative.View, {
+          style: styles.InputBox,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 167
           }
         }, _react.default.createElement(_reactNative.TextInput, {
           placeholder: "User Name",
@@ -92926,9 +92950,15 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 200
+            lineNumber: 168
           }
-        }), _react.default.createElement(_reactNative.TextInput, {
+        })), _react.default.createElement(_reactNative.View, {
+          style: styles.InputBox,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 170
+          }
+        }, _react.default.createElement(_reactNative.TextInput, {
           placeholder: "Password",
           id: "P1",
           onChangeText: function onChangeText(password) {
@@ -92938,22 +92968,27 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 202
+            lineNumber: 171
           }
-        }), _react.default.createElement(_reactNative.Text, {
+        })), _react.default.createElement(_reactNative.View, {
+          style: styles.BtnSpacing,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 203
+            lineNumber: 174
           }
-        }, " Login "), _react.default.createElement(_reactNative.TouchableOpacity, {
+        }, _react.default.createElement(_reactNative.Button, {
           style: styles.ButtonStlye,
           onPress: this.validateUser.bind(this),
+          title: "Login",
+          color: "#7a7c82",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 205
+            lineNumber: 175
           }
-        }), _react.default.createElement(_reactNative.TouchableOpacity, {
+        })), _react.default.createElement(_reactNative.Button, {
+          color: "#7a7c82",
           style: styles.ButtonStlye,
+          title: "Register",
           onPress: function onPress() {
             _this3.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
@@ -92964,14 +92999,9 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 211
+            lineNumber: 184
           }
-        }), _react.default.createElement(_reactNative.Text, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 222
-          }
-        }, " go to register ")));
+        })));
       }
     }]);
     return LoginScreen;
@@ -92986,7 +93016,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       var _this4;
 
       (0, _classCallCheck2.default)(this, RegisterScreen);
-      _this4 = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RegisterScreen).call(this, props));
+      _this4 = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(RegisterScreen).call(this, props));
       _this4.state = {
         userName: " ",
         password: " ",
@@ -93028,7 +93058,23 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           var newuser = {
             UserName1: this.state.userName,
             Password: this.state.password,
-            Currency: this.state.currency
+            Currency: this.state.currency,
+            NotificationFreq: "hourly",
+            BtcWatch: {
+              Watching: "no",
+              WatchVal: 0,
+              WatchType: ""
+            },
+            LtcWatch: {
+              Watching: "no",
+              WatchVal: 0,
+              WatchType: ""
+            },
+            EthWatch: {
+              Watching: "no",
+              WatchVal: 0,
+              WatchType: ""
+            }
           };
 
           _reactNative.AsyncStorage.setItem(newuser1, JSON.stringify(newuser), function () {
@@ -93045,6 +93091,18 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
         var _this5 = this;
 
         return _react.default.createElement(_reactNative.View, {
+          style: styles.MainContiner,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 283
+          }
+        }, _react.default.createElement(_reactNative.Text, {
+          style: styles.Header,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 284
+          }
+        }, "Register"), _react.default.createElement(_reactNative.View, {
           style: {
             flex: 1,
             alignItems: 'center',
@@ -93052,19 +93110,20 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 302
+            lineNumber: 285
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 303
+            lineNumber: 288
           }
-        }, "Register"), _react.default.createElement(_reactNative.Text, {
+        }, "User Name:"), _react.default.createElement(_reactNative.View, {
+          style: styles.InputBox,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 305
+            lineNumber: 289
           }
-        }, "User Name:"), _react.default.createElement(_reactNative.TextInput, {
+        }, _react.default.createElement(_reactNative.TextInput, {
           placeholder: "User Name",
           id: "U1",
           onChangeText: function onChangeText(userName) {
@@ -93074,14 +93133,20 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 306
+            lineNumber: 290
           }
-        }), _react.default.createElement(_reactNative.Text, {
+        })), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 308
+            lineNumber: 292
           }
-        }, "Password:"), _react.default.createElement(_reactNative.TextInput, {
+        }, "Password:"), _react.default.createElement(_reactNative.View, {
+          style: styles.InputBox,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 293
+          }
+        }, _react.default.createElement(_reactNative.TextInput, {
           placeholder: "Password",
           id: "P1",
           onChangeText: function onChangeText(password) {
@@ -93091,14 +93156,14 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 309
+            lineNumber: 294
           }
-        }), _react.default.createElement(_reactNative.Text, {
+        })), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 311
+            lineNumber: 297
           }
-        }, "Location:"), _react.default.createElement(_reactNative.Picker, {
+        }, "Currency Type:"), _react.default.createElement(_reactNative.Picker, {
           style: {
             height: 50,
             width: 100
@@ -93107,31 +93172,60 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           onValueChange: this.updatecurrency,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 312
+            lineNumber: 299
           }
         }, _react.default.createElement(_reactNative.Picker.Item, {
+          label: " ",
+          value: "aud",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 303
+          }
+        }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "aud",
           value: "aud",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 316
+            lineNumber: 304
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "euro",
           value: "euro",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 317
+            lineNumber: 305
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "usd",
           value: "usd",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 318
+            lineNumber: 306
           }
-        })), _react.default.createElement(_reactNative.Button, {
+        })), _react.default.createElement(_reactNative.View, {
+          style: styles.BtnSpacing,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 311
+          }
+        }, _react.default.createElement(_reactNative.Button, {
+          title: "Register",
+          color: "#7a7c82",
+          style: styles.ButtonStlye,
+          onPress: this.registerUser.bind(this),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 312
+          }
+        })), _react.default.createElement(_reactNative.View, {
+          style: styles.BtnSpacing,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 320
+          }
+        }, _react.default.createElement(_reactNative.Button, {
           title: "Back to Login ",
+          color: "#7a7c82",
           onPress: function onPress() {
             _this5.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
@@ -93142,21 +93236,9 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 322
+            lineNumber: 321
           }
-        }), _react.default.createElement(_reactNative.Text, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 335
-          }
-        }, " register "), _react.default.createElement(_reactNative.TouchableOpacity, {
-          style: styles.ButtonStlye,
-          onPress: this.registerUser.bind(this),
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 337
-          }
-        }));
+        }))));
       }
     }]);
     return RegisterScreen;
@@ -93169,7 +93251,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     function MainScreen() {
       (0, _classCallCheck2.default)(this, MainScreen);
-      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(MainScreen).apply(this, arguments));
+      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(MainScreen).apply(this, arguments));
     }
 
     (0, _createClass2.default)(MainScreen, [{
@@ -93178,6 +93260,18 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
         var _this6 = this;
 
         return _react.default.createElement(_reactNative.View, {
+          style: styles.MainContiner,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 344
+          }
+        }, _react.default.createElement(_reactNative.Text, {
+          style: styles.Header,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 345
+          }
+        }, "Trade managment app"), _react.default.createElement(_reactNative.View, {
           style: {
             flex: 1,
             alignItems: 'center',
@@ -93185,15 +93279,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 358
+            lineNumber: 346
           }
-        }, _react.default.createElement(_reactNative.Text, {
+        }, _react.default.createElement(_reactNative.View, {
+          style: styles.BtnSpacing,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 359
+            lineNumber: 350
           }
-        }, "Trade managment app"), _react.default.createElement(_reactNative.Button, {
+        }, _react.default.createElement(_reactNative.Button, {
           title: "crpyto market details ",
+          color: "#7a7c82",
           onPress: function onPress() {
             _this6.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
@@ -93204,10 +93300,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 360
+            lineNumber: 351
           }
-        }), _react.default.createElement(_reactNative.Button, {
+        })), _react.default.createElement(_reactNative.View, {
+          style: styles.BtnSpacing,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 364
+          }
+        }, _react.default.createElement(_reactNative.Button, {
           title: "watch crypto currencies ",
+          color: "#7a7c82",
           onPress: function onPress() {
             _this6.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
@@ -93218,10 +93321,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 371
+            lineNumber: 365
           }
-        }), _react.default.createElement(_reactNative.Button, {
+        })), _react.default.createElement(_reactNative.View, {
+          style: styles.BtnSpacing,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 378
+          }
+        }, _react.default.createElement(_reactNative.Button, {
           title: "track youre investment",
+          color: "#7a7c82",
           onPress: function onPress() {
             _this6.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
@@ -93232,10 +93342,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 382
+            lineNumber: 379
           }
-        }), _react.default.createElement(_reactNative.Button, {
+        })), _react.default.createElement(_reactNative.View, {
+          style: styles.BtnSpacing,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 392
+          }
+        }, _react.default.createElement(_reactNative.Button, {
           title: "settings ",
+          color: "#7a7c82",
           onPress: function onPress() {
             _this6.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
@@ -93248,8 +93365,15 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
             fileName: _jsxFileName,
             lineNumber: 393
           }
-        }), _react.default.createElement(_reactNative.Button, {
-          title: "Back to Login ",
+        })), _react.default.createElement(_reactNative.View, {
+          style: styles.BtnSpacing,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 406
+          }
+        }, _react.default.createElement(_reactNative.Button, {
+          title: "Logout",
+          color: "#7a7c82",
           onPress: function onPress() {
             _this6.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
@@ -93260,9 +93384,9 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 404
+            lineNumber: 407
           }
-        }));
+        }))));
       }
     }]);
     return MainScreen;
@@ -93273,17 +93397,103 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var SettingsScreen = function (_React$Component4) {
     (0, _inherits2.default)(SettingsScreen, _React$Component4);
 
-    function SettingsScreen() {
+    function SettingsScreen(props) {
+      var _this7;
+
       (0, _classCallCheck2.default)(this, SettingsScreen);
-      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(SettingsScreen).apply(this, arguments));
+      _this7 = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(SettingsScreen).call(this, props));
+      _this7.state = {
+        userName: " ",
+        password: " ",
+        currency: " ",
+        notFreq: " "
+      };
+
+      _this7.updatecurrency = function (currency1) {
+        var statecurrency = currency1;
+        console.log(statecurrency);
+
+        _this7.setState({
+          currency: statecurrency
+        });
+
+        console.log("state currency");
+        console.log(_this7.state.currency);
+        console.log("returned  currency");
+        console.log(currency1);
+        var newuser1 = global.UserNameglobal;
+        console.log(newuser1);
+        var newuser = {
+          Currency: currency1
+        };
+
+        _reactNative.AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), function () {
+          _reactNative.AsyncStorage.getItem(newuser1, function (err, result) {
+            var Retval = JSON.parse(result);
+            console.log("username");
+            console.log(Retval.UserName1);
+            console.log("currency");
+            console.log(Retval.Currency);
+            global.currencyglobal = Retval.currency;
+          });
+        });
+      };
+
+      _this7.updateNotFreq = function (Freq1) {
+        _this7.setState({
+          notFreq: Freq1
+        });
+
+        console.log(_this7.state.currency);
+        console.log("notification freq state");
+        console.log(_this7.state.notFreq);
+        var newuser1 = global.UserNameglobal;
+        var newuser = {
+          NotificationFreq: Freq1
+        };
+
+        _reactNative.AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), function () {
+          _reactNative.AsyncStorage.getItem(newuser1, function (err, result) {
+            var Retval = JSON.parse(result);
+            console.log(Retval.UserName1);
+            console.log("notification freq");
+            console.log(Retval.NotificationFreq);
+
+            _this7.setState({
+              notFreq: Retval.NotificationFreq
+            });
+          });
+        });
+      };
+
+      _this7.users = [{
+        userName: "aaa",
+        passhash: "abc"
+      }, {
+        userName: "bb",
+        passhash: "123"
+      }];
+      return _this7;
     }
 
     (0, _createClass2.default)(SettingsScreen, [{
       key: "render",
       value: function render() {
-        var _this7 = this;
+        var _this8 = this;
 
         return _react.default.createElement(_reactNative.View, {
+          style: styles.MainContiner,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 520
+          }
+        }, _react.default.createElement(_reactNative.Text, {
+          style: styles.Header,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 521
+          }
+        }, "Settings"), _react.default.createElement(_reactNative.View, {
           style: {
             flex: 1,
             alignItems: 'center',
@@ -93291,113 +93501,117 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 422
+            lineNumber: 522
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 423
-          }
-        }, "Settings"), _react.default.createElement(_reactNative.Text, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 426
+            lineNumber: 526
           }
         }, "Location"), _react.default.createElement(_reactNative.Picker, {
           style: {
             height: 50,
             width: 100
           },
-          onValueChange: function onValueChange(itemValue, itemIndex) {
-            return _this7.setState({
-              language: itemValue
-            });
-          },
+          selectedValue: this.state.currency,
+          onValueChange: this.updatecurrency,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 427
+            lineNumber: 527
           }
         }, _react.default.createElement(_reactNative.Picker.Item, {
+          label: " ",
+          value: "aud",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 531
+          }
+        }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "aud",
           value: "aud",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 433
+            lineNumber: 532
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "euro",
           value: "euro",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 434
+            lineNumber: 533
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "usd",
           value: "usd",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 435
+            lineNumber: 534
           }
         })), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 440
+            lineNumber: 539
           }
         }, "notifications "), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 443
+            lineNumber: 542
           }
         }, "notification freqency"), _react.default.createElement(_reactNative.Picker, {
           style: {
             height: 50,
             width: 100
           },
-          onValueChange: function onValueChange(itemValue, itemIndex) {
-            return _this7.setState({
-              language: itemValue
-            });
-          },
+          selectedValue: this.state.notFreq,
+          onValueChange: this.updateNotFreq,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 444
+            lineNumber: 543
           }
         }, _react.default.createElement(_reactNative.Picker.Item, {
-          label: "aud",
-          value: "aud",
+          label: " ",
+          value: "hourly",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 450
+            lineNumber: 547
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
-          label: "euro",
-          value: "euro",
+          label: "hourly",
+          value: "hourly",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 451
+            lineNumber: 548
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
-          label: "usd",
-          value: "usd",
+          label: "daily",
+          value: "daily",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 452
+            lineNumber: 549
+          }
+        }), _react.default.createElement(_reactNative.Picker.Item, {
+          label: "weekly",
+          value: "weekly",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 550
           }
         })), _react.default.createElement(_reactNative.Button, {
-          title: "Back to Login ",
+          title: "Back to Main screen ",
+          color: "#7a7c82",
           onPress: function onPress() {
-            _this7.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this8.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
-                routeName: 'Login'
+                routeName: 'Main'
               })]
             }));
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 456
+            lineNumber: 554
           }
-        }));
+        })));
       }
     }]);
     return SettingsScreen;
@@ -93409,16 +93623,574 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _inherits2.default)(GeneralScreen, _React$Component5);
 
     function GeneralScreen() {
+      var _getPrototypeOf2;
+
+      var _this9;
+
       (0, _classCallCheck2.default)(this, GeneralScreen);
-      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(GeneralScreen).apply(this, arguments));
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      _this9 = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(GeneralScreen)).call.apply(_getPrototypeOf2, [this].concat(args)));
+      _this9.state = {
+        btcBuyPrice: 0,
+        btcSellPrice: 0,
+        ethBuyPrice: 0,
+        ethSellPrice: 0,
+        ltcBuyPrice: 0,
+        ltcSellPrice: 0
+      };
+      return _this9;
     }
 
     (0, _createClass2.default)(GeneralScreen, [{
+      key: "componentDidMount",
+      value: function componentDidMount() {
+        var _this10 = this;
+
+        console.log(global.currencyglobal);
+
+        if (global.currencyglobal == "euro") {
+          console.log("this is working");
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceEuro/GetPriceBtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log(responseJson);
+
+            _this10.setState({
+              btcBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              btcBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              btcBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceEuro/GetPriceEth').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ethBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ethBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              ethBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceEuro/GetPriceLtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ltcBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ltcBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              ltcBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceEuro/GetPriceBtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              btcBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              btcBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              btcBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceEuro/GetPriceEth').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ethBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ethBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              ethBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceEuro/GetPriceLtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ltcBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ltcBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              ltcBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptSellPriceEuro/GetPriceBtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              btcSellPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              btcSellPrice: responseJson
+            });
+
+            _this10.setState({
+              btcSellPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptSellPriceEuro/GetPriceEth').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ethSellPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ethSellPrice: responseJson
+            });
+
+            _this10.setState({
+              ethSellPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptSellPriceEuro/GetPriceLtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ltcSellPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ltcSellPrice: responseJson
+            });
+
+            _this10.setState({
+              ltcSellPrice: -1
+            });
+          });
+        } else if (global.currencyglobal == "usd") {
+          console.log("this is working");
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceUsd/GetPriceBtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log(responseJson);
+
+            _this10.setState({
+              btcBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              btcBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              btcBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceUsd/GetPriceEth').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ethBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ethBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              ethBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceUsd/GetPriceLtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ltcBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ltcBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              ltcBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceUsd/GetPriceBtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              btcBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              btcBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              btcBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceUsd/GetPriceEth').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ethBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ethBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              ethBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceUsd/GetPriceLtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ltcBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ltcBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              ltcBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptSellPriceUsd/GetPriceBtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              btcSellPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              btcSellPrice: responseJson
+            });
+
+            _this10.setState({
+              btcSellPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptSellPriceUsd/GetPriceEth').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ethSellPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ethSellPrice: responseJson
+            });
+
+            _this10.setState({
+              ethSellPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptSellPriceUsd/GetPriceLtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ltcSellPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ltcSellPrice: responseJson
+            });
+
+            _this10.setState({
+              ltcSellPrice: -1
+            });
+          });
+        } else if (global.currencyglobal == "aud") {
+          console.log("this is working");
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceAud/GetPriceBtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log(responseJson);
+
+            _this10.setState({
+              btcBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              btcBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              btcBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceAud/GetPriceEth').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ethBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ethBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              ethBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceAud/GetPriceLtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ltcBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ltcBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              ltcBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceAud/GetPriceBtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              btcBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              btcBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              btcBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceAud/GetPriceEth').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ethBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ethBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              ethBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptBuyPriceAud/GetPriceLtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ltcBuyPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ltcBuyPrice: responseJson
+            });
+
+            _this10.setState({
+              ltcBuyPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptSellPriceAud/GetPriceBtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              btcSellPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              btcSellPrice: responseJson
+            });
+
+            _this10.setState({
+              btcSellPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptSellPriceAud/GetPriceEth').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ethSellPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ethSellPrice: responseJson
+            });
+
+            _this10.setState({
+              ethSellPrice: -1
+            });
+          });
+          fetch('http://10.0.0.98:3000/api/CrptSellPriceAud/GetPriceLtc').then(function (Response) {
+            return Response.json();
+          }).then(function (responseJson) {
+            console.log("this is working");
+
+            _this10.setState({
+              ltcSellPrice: responseJson
+            });
+          }).catch(function (e) {
+            console.log("this is  not working");
+            console.log(e);
+            console.log({
+              ltcSellPrice: responseJson
+            });
+
+            _this10.setState({
+              ltcSellPrice: -1
+            });
+          });
+        }
+      }
+    }, {
       key: "render",
       value: function render() {
-        var _this8 = this;
+        var _this11 = this;
 
         return _react.default.createElement(_reactNative.View, {
+          style: styles.MainContiner,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 958
+          }
+        }, _react.default.createElement(_reactNative.Text, {
+          style: styles.Header,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 959
+          }
+        }, "General market screen"), _react.default.createElement(_reactNative.View, {
           style: {
             flex: 1,
             alignItems: 'center',
@@ -93426,17 +94198,144 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 474
+            lineNumber: 960
+          }
+        }, _react.default.createElement(_reactNative.View, {
+          style: styles.Tablebox,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 963
+          }
+        }, _react.default.createElement(_reactNative.View, {
+          style: {
+            flex: 1,
+            flexDirection: 'row'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 964
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 475
+            lineNumber: 965
           }
-        }, "General market screen"), _react.default.createElement(_reactNative.Button, {
+        }, "Buy bitcoin cash price: "), _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 966
+          }
+        }, this.state.btcBuyPrice)), _react.default.createElement(_reactNative.View, {
+          style: {
+            flex: 1,
+            flexDirection: 'row'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 968
+          }
+        }, _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 969
+          }
+        }, "Sell bitcoin cash price: "), _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 970
+          }
+        }, this.state.btcBuyPrice))), _react.default.createElement(_reactNative.View, {
+          style: styles.Tablebox,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 974
+          }
+        }, _react.default.createElement(_reactNative.View, {
+          style: {
+            flex: 1,
+            flexDirection: 'row'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 975
+          }
+        }, _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 976
+          }
+        }, "Buy lite coin  price: "), _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 977
+          }
+        }, this.state.ltcBuyPrice)), _react.default.createElement(_reactNative.View, {
+          style: {
+            flex: 1,
+            flexDirection: 'row'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 979
+          }
+        }, _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 980
+          }
+        }, "Sell lite coin price: "), _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 981
+          }
+        }, this.state.ltcSellPrice))), _react.default.createElement(_reactNative.View, {
+          style: styles.Tablebox,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 985
+          }
+        }, _react.default.createElement(_reactNative.View, {
+          style: {
+            flex: 1,
+            flexDirection: 'row'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 986
+          }
+        }, _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 987
+          }
+        }, "Buy etherium price: "), _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 988
+          }
+        }, this.state.ethBuyPrice)), _react.default.createElement(_reactNative.View, {
+          style: {
+            flex: 1,
+            flexDirection: 'row'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 990
+          }
+        }, _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 991
+          }
+        }, "Sell etherium price: "), _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 992
+          }
+        }, this.state.ethSellPrice))), _react.default.createElement(_reactNative.Button, {
           title: "Back to main menu ",
           onPress: function onPress() {
-            _this8.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this11.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Main'
@@ -93445,9 +94344,9 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 476
+            lineNumber: 995
           }
-        }));
+        })));
       }
     }]);
     return GeneralScreen;
@@ -93460,13 +94359,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     function WatchMScreen() {
       (0, _classCallCheck2.default)(this, WatchMScreen);
-      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(WatchMScreen).apply(this, arguments));
+      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(WatchMScreen).apply(this, arguments));
     }
 
     (0, _createClass2.default)(WatchMScreen, [{
       key: "render",
       value: function render() {
-        var _this9 = this;
+        var _this12 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93476,17 +94375,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 494
+            lineNumber: 1014
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 495
+            lineNumber: 1015
           }
         }, "Watch market Screen"), _react.default.createElement(_reactNative.Button, {
           title: "Back to  main menu ",
           onPress: function onPress() {
-            _this9.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this12.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Main'
@@ -93495,7 +94394,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 496
+            lineNumber: 1016
           }
         }));
       }
@@ -93510,13 +94409,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     function TrackScreen() {
       (0, _classCallCheck2.default)(this, TrackScreen);
-      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TrackScreen).apply(this, arguments));
+      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(TrackScreen).apply(this, arguments));
     }
 
     (0, _createClass2.default)(TrackScreen, [{
       key: "render",
       value: function render() {
-        var _this10 = this;
+        var _this13 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93526,17 +94425,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 514
+            lineNumber: 1034
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 515
+            lineNumber: 1035
           }
         }, "Track youre investment Screen"), _react.default.createElement(_reactNative.Button, {
           title: "Back to Main menu ",
           onPress: function onPress() {
-            _this10.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this13.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'Main'
@@ -93545,12 +94444,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 516
+            lineNumber: 1036
           }
         }), _react.default.createElement(_reactNative.Button, {
           title: "add investment ",
           onPress: function onPress() {
-            _this10.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this13.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'AddInv'
@@ -93559,7 +94458,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 527
+            lineNumber: 1047
           }
         }));
       }
@@ -93574,13 +94473,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     function InvAddScreen() {
       (0, _classCallCheck2.default)(this, InvAddScreen);
-      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(InvAddScreen).apply(this, arguments));
+      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(InvAddScreen).apply(this, arguments));
     }
 
     (0, _createClass2.default)(InvAddScreen, [{
       key: "render",
       value: function render() {
-        var _this11 = this;
+        var _this14 = this;
 
         return _react.default.createElement(_reactNative.View, {
           style: {
@@ -93590,17 +94489,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 545
+            lineNumber: 1065
           }
         }, _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 546
+            lineNumber: 1066
           }
         }, "Add Investment Screen"), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 551
+            lineNumber: 1071
           }
         }, "currency type"), _react.default.createElement(_reactNative.Picker, {
           style: {
@@ -93608,78 +94507,78 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
             width: 100
           },
           onValueChange: function onValueChange(itemValue, itemIndex) {
-            return _this11.setState({
+            return _this14.setState({
               language: itemValue
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 553
+            lineNumber: 1073
           }
         }, _react.default.createElement(_reactNative.Picker.Item, {
           label: "aud",
           value: "aud",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 559
+            lineNumber: 1079
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "euro",
           value: "euro",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 560
+            lineNumber: 1080
           }
         }), _react.default.createElement(_reactNative.Picker.Item, {
           label: "usd",
           value: "usd",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 561
+            lineNumber: 1081
           }
         })), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 564
+            lineNumber: 1084
           }
         }, "ammount of coins "), _react.default.createElement(_reactNative.TextInput, {
           placeholder: "Password",
           id: "P1",
           onChangeText: function onChangeText(password) {
-            return _this11.setState({
+            return _this14.setState({
               password: password
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 565
+            lineNumber: 1085
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 567
+            lineNumber: 1087
           }
         }, "purchase price"), _react.default.createElement(_reactNative.TextInput, {
           placeholder: "Password",
           id: "P1",
           onChangeText: function onChangeText(password) {
-            return _this11.setState({
+            return _this14.setState({
               password: password
             });
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 568
+            lineNumber: 1088
           }
         }), _react.default.createElement(_reactNative.Text, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 570
+            lineNumber: 1090
           }
         }, "notifications "), _react.default.createElement(_reactNative.Button, {
           title: "Back to Main menu ",
           onPress: function onPress() {
-            _this11.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this14.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'InvTrack'
@@ -93688,12 +94587,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 579
+            lineNumber: 1099
           }
         }), _react.default.createElement(_reactNative.Button, {
           title: "add investment ",
           onPress: function onPress() {
-            _this11.props.navigation.dispatch(_reactNavigation.StackActions.reset({
+            _this14.props.navigation.dispatch(_reactNavigation.StackActions.reset({
               index: 0,
               actions: [_reactNavigation.NavigationActions.navigate({
                 routeName: 'InvTrack'
@@ -93702,7 +94601,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 592
+            lineNumber: 1112
           }
         }));
       }
@@ -93752,6 +94651,15 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       backgroundColor: '#f5f5dc',
       height: 300
     },
+    InputBox: {
+      margin: 20,
+      backgroundColor: "#ffffff",
+      width: 200,
+      borderColor: "#7b7c7f",
+      borderRadius: 4,
+      borderWidth: 0.5,
+      alignItems: "center"
+    },
     ButtonStlye: {
       alignItems: 'center',
       padding: 10,
@@ -93759,6 +94667,16 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       width: 200,
       height: 100,
       backgroundColor: '#505050'
+    },
+    BtnSpacing: {
+      margin: 20
+    },
+    Tablebox: {
+      borderColor: "#000000",
+      borderRadius: 4,
+      borderWidth: 0.5,
+      height: 100,
+      width: 300
     },
     Header: {
       justifyContent: 'center',
@@ -93785,7 +94703,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       marginBottom: 5
     }
   });
-},569,[1,22,23,30,33,32,36,49,198,2,570],"App.js");
+},569,[1,22,23,30,33,32,36,49,198,2,570,706],"App.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = {
     get createAppContainer() {
@@ -113216,12 +114134,66 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _default2 = TouchableItem;
   exports.default = _default2;
 },705,[1,11,9,22,23,30,33,36,49,198,2],"node_modules\\react-navigation-drawer\\dist\\views\\TouchableItem.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+  exports.Global = exports.Config = exports.Circus = void 0;
+
+  var Circus = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[0], "./Circus"));
+
+  exports.Circus = Circus;
+
+  var Config = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[1], "./Config"));
+
+  exports.Config = Config;
+
+  var Global = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[2], "./Global"));
+
+  exports.Global = Global;
+
+  function _interopRequireWildcard(obj) {
+    if (obj && obj.__esModule) {
+      return obj;
+    } else {
+      var newObj = {};
+
+      if (obj != null) {
+        for (var key in obj) {
+          if (Object.prototype.hasOwnProperty.call(obj, key)) {
+            var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {};
+
+            if (desc.get || desc.set) {
+              Object.defineProperty(newObj, key, desc);
+            } else {
+              newObj[key] = obj[key];
+            }
+          }
+        }
+      }
+
+      newObj.default = obj;
+      return newObj;
+    }
+  }
+},706,[707,708,709],"node_modules\\@jest\\types\\build\\index.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  'use strict';
+},707,[],"node_modules\\@jest\\types\\build\\Circus.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  'use strict';
+},708,[],"node_modules\\@jest\\types\\build\\Config.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  'use strict';
+},709,[],"node_modules\\@jest\\types\\build\\Global.js");
 __d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
   module.exports = {
   "name": "FixedAssign2",
   "displayName": "FixedAssign2"
 };
-},706,[],"app.json");
+},710,[],"app.json");
 __r(86);
 __r(0);
 //# sourceMappingURL=index.map
