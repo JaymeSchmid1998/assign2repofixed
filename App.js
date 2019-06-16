@@ -265,7 +265,9 @@ class RegisterScreen extends React.Component {
         BtcWatch: { Watching: "no", WatchVal: 0, WatchType: "" },
         LtcWatch: { Watching: "no", WatchVal: 0, WatchType: "" },
         EthWatch: { Watching: "no", WatchVal: 0, WatchType: "" },
-
+        BtcInv: { Investment: "no", InvValPer: 0, InvToal: 0 ,InvQuant:0, InvSatus:"" },
+        LtcInv: { Investment: "no", InvValPer: 0, InvToal: 0, InvQuant:0 , InvSatus:""},
+        EthInv: { Investment: "no", InvValPer: 0, InvToal: 0, InvQuant:0, InvSatus:"" },
 
 
       };
@@ -2081,10 +2083,19 @@ let newuser1=global.UserNameglobal;
   }
 }
 class TrackScreen extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { btcBuyPrice: 0, btcSellPrice: 0, ethBuyPrice: 0, ethSellPrice: 0, ltcBuyPrice: 0, ltcSellPrice: 0,btcIsWatching:" " , btcButtonVal: "", btcWatchVal: 0, btcWatchType: "",ltcIsWatching:" " , ltcButtonVal: "", ltcWatchVal: 0, ltcWatchType: "",ethIsWatching:" " , ethButtonVal: "", ethWatchVal: 0, ethWatchType: "" };
+  }
+
+
+  
   render() {
     return (
+      <View style={styles.MainContiner}>
+       <Text style={styles.Header}>Track youre investment Screen</Text>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Track youre investment Screen</Text>
+       
         <Button
           title="Back to Main menu "
           onPress={() => {
@@ -2108,14 +2119,141 @@ class TrackScreen extends React.Component {
           }}
         />
       </View>
+      </View>
     );
   }
 }
 class InvAddScreen extends React.Component {
+
+  state = { userName: " ", password: " ", currency: '',investmentType:"",isInvesting:'',indivdinvesmtentammount:0,TotinvestmentValue:0,quantityOfInvestment:0,investmentStatus:"" }; 
+
+  updateInvestType = (currency1) => {
+    this.setState({ currency: currency1 });
+  }
+
+AddInvestment(){
+
+
+if(this.state.quantityOfInvestment==null||this.state.quantityOfInvestment==0||this.state.quantityOfInvestment==""){
+  ToastAndroid.show('input a quantity', ToastAndroid.SHORT);
+}
+else if(this.state.indivdinvesmtentammount==null||this.state.indivdinvesmtentammount==0||this.state.indivdinvesmtentammount==""){
+  ToastAndroid.show('input a invement ammount', ToastAndroid.SHORT);
+}
+else if(this.state.investmentType==null||this.state.indivdinvesmtentammount==""){
+  ToastAndroid.show('select  a investment type', ToastAndroid.SHORT);
+}
+else{
+  let toatalVal=this.state.quantityOfInvestment*this.state.indivdinvesmtentammount;
+  this.setState({TotinvestmentValue:toatalVal}, function () {
+    let newuser1=global.UserNameglobal;
+    if(this.state.investmentType=="btc"){
+
+      let newuser = {
+      
+        BtcInv: { Investment: "yes", InvValPer: this.state.indivdinvesmtentammount, InvToal: this.state.TotinvestmentValue ,InvQuant:this.state.quantityOfInvestment, InvSatus:" ok" },
+       // LtcInv: { Investment: "no", InvValPer: 0, InvToal: 0, InvQuant:0 , InvSatus:""},
+       // EthInv: { Investment: "no", InvValPer: 0, InvToal: 0, InvQuant:0, InvSatus:"" },
+
+
+      };
+      //AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+        AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+        AsyncStorage.getItem(newuser1, (err, result) => {
+          let Retval = JSON.parse(result);
+          console.log(Retval.UserName1);
+
+
+          ToastAndroid.show('added btc investment', ToastAndroid.SHORT);
+
+
+        });
+      });
+
+
+    }
+    else if(this.state.investmentType=="eth"){
+      let newuser = {
+      
+        EthInv: { Investment: "yes", InvValPer: this.state.indivdinvesmtentammount, InvToal: this.state.TotinvestmentValue ,InvQuant:this.state.quantityOfInvestment, InvSatus:" ok" },
+       // LtcInv: { Investment: "no", InvValPer: 0, InvToal: 0, InvQuant:0 , InvSatus:""},
+       // EthInv: { Investment: "no", InvValPer: 0, InvToal: 0, InvQuant:0, InvSatus:"" },
+
+
+      };
+     // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+      AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+        AsyncStorage.getItem(newuser1, (err, result) => {
+          let Retval = JSON.parse(result);
+          console.log(Retval.UserName1);
+
+
+          ToastAndroid.show('added eth investment', ToastAndroid.SHORT);
+
+        });
+      });
+  
+    }
+    else if(this.state.investmentType=="ltc"){
+  
+
+
+
+      let newuser = {
+      
+        LtcInv: { Investment: "yes", InvValPer: this.state.indivdinvesmtentammount, InvToal: this.state.TotinvestmentValue ,InvQuant:this.state.quantityOfInvestment, InvSatus:" ok" },
+       // LtcInv: { Investment: "no", InvValPer: 0, InvToal: 0, InvQuant:0 , InvSatus:""},
+       // EthInv: { Investment: "no", InvValPer: 0, InvToal: 0, InvQuant:0, InvSatus:"" },
+
+
+      };
+     // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+      AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+        AsyncStorage.getItem(newuser1, (err, result) => {
+          let Retval = JSON.parse(result);
+          console.log(Retval.UserName1);
+
+
+          ToastAndroid.show('added ltc investment', ToastAndroid.SHORT);
+
+
+
+
+
+
+
+        });
+      });
+  
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    }
+});
+}
+  
+
+
+}
+
+
+
   render() {
     return (
+      <View style={styles.MainContiner}>
+      <Text style={styles.Header}>Add Investment Screen</Text>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Add Investment Screen</Text>
+        
 
 
 
@@ -2125,24 +2263,28 @@ class InvAddScreen extends React.Component {
         <Picker
           //selectedValue={this.state.language}
           style={{ height: 50, width: 100 }}
-          onValueChange={(itemValue, itemIndex) =>
-            this.setState({ language: itemValue })
+          selectedValue={this.state.investmentType} onValueChange={this.updateInvestType} >
           }>
-          <Picker.Item label="aud" value="aud" />
-          <Picker.Item label="euro" value="euro" />
-          <Picker.Item label="usd" value="usd" />
+          <Picker.Item label="btc" value="btc" />
+          <Picker.Item label="btc" value="btc" />
+          <Picker.Item label="ltc" value="ltc" />
+          <Picker.Item label="eth" value="eth" />
         </Picker>
 
         <Text>ammount of coins </Text>
-        <TextInput placeholder="Password" id="P1" onChangeText={(password) => this.setState({ password })} />
+        <TextInput placeholder="Password" id="P1" onChangeText={(quantityOfInvestment) => this.setState({ quantityOfInvestment })} />
 
         <Text>purchase price</Text>
-        <TextInput placeholder="Password" id="P1" onChangeText={(password) => this.setState({ password })} />
+        <TextInput placeholder="Password" id="P1" onChangeText={(indivdinvesmtentammount) => this.setState({ indivdinvesmtentammount })} />
+  
+      
 
-        <Text>notifications </Text>
 
-
-
+        <Button
+          title="add investment"
+          onPress={this.AddInvestment.bind(this)
+          }
+        />
 
 
 
@@ -2172,7 +2314,10 @@ class InvAddScreen extends React.Component {
             }))
           }}
         />
+        
       </View>
+      </View>
+      
     );
   }
 }
