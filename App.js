@@ -14,6 +14,7 @@ import { AsyncStorage } from 'react-native';
 
 
 class LoginScreen extends React.Component {
+ //this part sets teh state 
   state = { userName: " ", password: " ", currency: " " };
   constructor(props) {
     //1
@@ -29,6 +30,7 @@ class LoginScreen extends React.Component {
 
     //3
     // this.handlechange = this.handlechange.bind(this);
+    //this part binds the functions
     this.validateUser = this.validateUser.bind(this);
     this.registerUser = this.registerUser.bind(this);
     //4:user  data 
@@ -43,85 +45,47 @@ class LoginScreen extends React.Component {
 
   }
 
-  registerUser() {
-
-    console.log(this.state.userName);
-    console.log(this.state.password);
-    console.log(this.state.currency);
-
-    /*
-    let newuser= this.state.userName;
-    
-    
-    
-        let newuser = {
-          UserName1:this.state.userName,
-          Password: this.state.password,
-          Currency:this.state.currency,
-       
-          
-        };
-        AsyncStorage.setItem(newuser, JSON.stringify(UID123_object), () => {
-          // AsyncStorage.mergeItem(newuser, JSON.stringify(UID123_delta), () => {
-             AsyncStorage.getItem(newuser, (err, result) => {
-               console.log(result);
-             });
-           });*/
-
-
-
-  }
-
+ 
+//this part validates the users credentials 
   validateUser() {
-
-    /*fetch("http://tiny.cc/y7qd7y",{mode:'no-cors'})
-    /.then(red =>resizeBy.json())
-    .then(
-      (result)=>{
-        console.log(result);
-      },
-      
-    )*/
-    // console.log(this.state.userName);
-    //console.log(this.state.password);
-
-    // console.log(this.state.userName);
-    // console.log(this.state.password);
-    // console.log(this.state.currency);
-
 
 
 
     try {
-
+//this part checks if the user name is null or blank
       if (this.state.userName == null || this.state.userName == "" || this.state.userName == " ") {
         console.log('enter username');
         ToastAndroid.show('please enter a username', ToastAndroid.SHORT);
       }
-
+//this part checks if the password is null or blank
       else if (this.state.password == null || this.state.password == "" || this.state.password == " ") {
         console.log('enter password');
         ToastAndroid.show('please enter a password', ToastAndroid.SHORT);
       }
+      //this part checks the users credentials 
       else {
         try {
+          //this part retrives the data from the async sotrage 
           let newuser1 = this.state.userName;
           AsyncStorage.getItem(newuser1, (err, result) => {
             let Retval = JSON.parse(result);
             console.log("username");
             console.log(result);
+            //this part checks if the username matches 
             if (this.state.userName == Retval.UserName1) {
               console.log("valid username")
-
+//this part checks if the password is valid 
               if (this.state.password == Retval.Password) {
+                //this part sets the global variables for currency ,password and username 
                 global.passwordglobal = Retval.Password;
                 global.UserNameglobal = Retval.UserName1;
                 global.currencyglobal = Retval.Currency;
                 console.log(passwordglobal);
                 console.log(UserNameglobal);
                 console.log(currencyglobal);
-
+//this part says the password is valid 
                 console.log("valid  password ");
+                //this part navigates the user to the main screen 
                 this.props.navigation.dispatch(StackActions.reset({
                   index: 0,
                   actions: [
@@ -130,11 +94,13 @@ class LoginScreen extends React.Component {
                 }))
               }
               else {
+                //this part tells the user the passwrod they have entered is invalid 
                 console.log("invalid password");
                 ToastAndroid.show('please enter valid password', ToastAndroid.SHORT);
               }
             }
             else {
+              //this part says the users username is invalid 
               console.log("invalid username");
               ToastAndroid.show('please enter valid username', ToastAndroid.SHORT);
             }
@@ -208,6 +174,7 @@ class LoginScreen extends React.Component {
 
 
 class RegisterScreen extends React.Component {
+ //this part sets the staes for the register screen 
   state = { userName: " ", password: " ", currency: '' }; constructor(props) {
     //1
     super(props);
@@ -215,8 +182,7 @@ class RegisterScreen extends React.Component {
 
 
     //3
-    // this.handlechange = this.handlechange.bind(this);
-    //this.validateUser = this.validateUser.bind(this);
+    
     this.registerUser = this.registerUser.bind(this);
     //4:user  data 
 
@@ -228,12 +194,12 @@ class RegisterScreen extends React.Component {
     ];
 
   }
-
+//this part updates the state of currency when it is selected on the picker 
 
   updatecurrency = (currency1) => {
     this.setState({ currency: currency1 });
   }
-
+//thsi is the function for registering users
   registerUser() {
 
     console.log(this.state.userName);
@@ -243,20 +209,23 @@ class RegisterScreen extends React.Component {
 
     let newuser1 = this.state.userName;
 
-
+//this part checks if the user name is not null or empty
     if (this.state.userName == null || this.state.userName == " " || this.state.userName == "") {
       console.log('enter username');
       ToastAndroid.show('please enter a username', ToastAndroid.SHORT);
     }
+    //this part checks if the password is not null or empty
     else if (this.state.password == null || this.state.password == " ") {
       console.log('enter username');
       ToastAndroid.show('please enter a password', ToastAndroid.SHORT);
     }
+    //this part checks if the currency is not null or empty
     else if (this.state.currency == null || this.state.currency == "") {
       console.log('enter username');
       ToastAndroid.show('please select a currency', ToastAndroid.SHORT);
     }
     else {
+      //this part creats the table for the new user
       let newuser = {
         UserName1: this.state.userName,
         Password: this.state.password,
@@ -271,13 +240,14 @@ class RegisterScreen extends React.Component {
 
 
       };
+      //this part adds the table to the async storage
       AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
         //AsyncStorage.mergeItem(newuser, JSON.stringify(UID123_delta), () => {
+          //this part retrives teh enterd in data from the db and then allows me to check it
         AsyncStorage.getItem(newuser1, (err, result) => {
           let Retval = JSON.parse(result);
           console.log(Retval.UserName1);
-
-
+//this tells the user that they have registered sucess fully
           ToastAndroid.show('Registered succesfully', ToastAndroid.SHORT);
 
 
@@ -439,14 +409,17 @@ class MainScreen extends React.Component {
     );
   }
 }
+
+
 class SettingsScreen extends React.Component {
 
   constructor(props) {
     super(props)
 
   }
+  //this part sets the states from the settings screen 
   state = { currency: ' ', notFreq: ' ' };
-
+//this part sets the state for currency when the user selects it in the picker
   updatecurrency = (currency1) => {
     let statecurrency = currency1;
     console.log(statecurrency);
@@ -456,11 +429,7 @@ class SettingsScreen extends React.Component {
       console.log(this.state.currency);
     });
 
-    //console.log(this.state.userName);
-
-    //console.log(this.state.currency);
-    //  console.log("returned  currency");
-    //console.log(currency1);
+   //this part creates the varaible  currency for the  async sotrage 
 
     let newuser1 = global.UserNameglobal;
     console.log(newuser1);
@@ -470,7 +439,8 @@ class SettingsScreen extends React.Component {
 
 
     };
-    // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+    //this parts sets the varibles aobve in the aync sotrage 
+    
     AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
       AsyncStorage.getItem(newuser1, (err, result) => {
         let Retval = JSON.parse(result);
@@ -479,13 +449,16 @@ class SettingsScreen extends React.Component {
         console.log("currency");
         console.log(Retval.Currency);
         global.currencyglobal = Retval.currency;
-        //  this.setState({ currency: Retval.Currency })
+      
       });
     });
 
 
 
   }
+
+
+  //this is pretty much the same as the picker above hoever instead of currency its updating frequency
   updateNotFreq = (Freq1) => {
     this.setState({ notFreq: Freq1 });
 
@@ -573,14 +546,18 @@ class SettingsScreen extends React.Component {
     );
   }
 }
-class GeneralScreen extends React.Component {
 
+
+class GeneralScreen extends React.Component {
+//this part sets the states for the geneneral currency screen
   state = { btcBuyPrice: 0, btcSellPrice: 0, ethBuyPrice: 0, ethSellPrice: 0, ltcBuyPrice: 0, ltcSellPrice: 0 };
 
 
   componentDidMount() {
     console.log(global.currencyglobal);
     //chooses the currency 
+
+    //this part checks the users type of currency and fetches the data for euro 
     if (global.currencyglobal == "euro") {
       console.log("this is working");
       // calling the API
@@ -703,6 +680,7 @@ class GeneralScreen extends React.Component {
         });
 
     }
+    //this part checks the users type of currency and fetches the data for usd
     else if (global.currencyglobal == "usd") {
       console.log("this is working");
       // calling the API
@@ -827,6 +805,7 @@ class GeneralScreen extends React.Component {
 
 
     }
+    //this part checks the users type of currency and fetches the data for aud
     else if (global.currencyglobal == "aud") {
       console.log("this is working");
       // calling the API
@@ -1017,6 +996,7 @@ class GeneralScreen extends React.Component {
 class WatchMScreen extends React.Component {
   constructor(props) {
     super(props)
+    //this part sets the states for the watch screen 
     this.state = { btcBuyPrice: 0, btcSellPrice: 0, ethBuyPrice: 0, ethSellPrice: 0, ltcBuyPrice: 0, ltcSellPrice: 0, btcIsWatching: " ", btcButtonVal: "", btcWatchVal: 0, btcWatchType: "", ltcIsWatching: " ", ltcButtonVal: "", ltcWatchVal: 0, ltcWatchType: "", ethIsWatching: " ", ethButtonVal: "", ethWatchVal: 0, ethWatchType: "" };
   }
 
@@ -1029,6 +1009,8 @@ class WatchMScreen extends React.Component {
   componentDidMount() {
     console.log(global.currencyglobal);
     //chooses the currency 
+    //this part checks the type of currency and then fetches the appropeiate data 
+    //this is the data this is goign to be fetched if the users currency is euro 
     if (global.currencyglobal == "euro") {
       console.log("this is working");
       // calling the API
@@ -1151,6 +1133,7 @@ class WatchMScreen extends React.Component {
         });
 
     }
+    //this is the data this is goign to be fetched if the users currency is usd
     else if (global.currencyglobal == "usd") {
       console.log("this is working");
       // calling the API
@@ -1275,6 +1258,7 @@ class WatchMScreen extends React.Component {
 
 
     }
+    //this is the data this is goign to be fetched if the users currency is aud
     else if (global.currencyglobal == "aud") {
       console.log("this is working");
       // calling the API
@@ -1397,11 +1381,12 @@ class WatchMScreen extends React.Component {
         });
 
     }
+    //this part fetches the data for the scree and then updates it once the screen is loaded 
     let newuser1 = global.UserNameglobal;
 
 
-    // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
-    //  AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+    
+      //this part fetches the data from the sotrage 
     AsyncStorage.getItem(newuser1, (err, result) => {
       let Retval = JSON.parse(result);
       console.log(Retval.UserName1);
@@ -1409,7 +1394,11 @@ class WatchMScreen extends React.Component {
       console.log(Retval.BtcWatch.Watching);
       console.log(Retval.BtcWatch.WatchVal);
       console.log(Retval.BtcWatch.WatchType);
+      //this part initalizes the data for the buttons once they have bee fetched from the db
+
+      //this sets the data to the state  from the data that is loaded from the database 
       this.setState({ btcIsWatching: Retval.BtcWatch.Watching }, function () {
+        //if the user is watching then  set the text in the button as unwatch
         if (this.state.btcIsWatching == "yes") {
 
           this.setState({ btcButtonVal: "Unwatch " }, function () {
@@ -1418,6 +1407,7 @@ class WatchMScreen extends React.Component {
 
 
         }
+        //if the user is  not watching then  set the text in the button as watch
         else if (this.state.btcIsWatching == "no") {
 
 
@@ -1430,7 +1420,7 @@ class WatchMScreen extends React.Component {
         }
 
       });
-
+//same as the above 
       this.setState({ ltcIsWatching: Retval.LtcWatch.Watching }, function () {
         if (this.state.ltcIsWatching == "yes") {
 
@@ -1456,7 +1446,7 @@ class WatchMScreen extends React.Component {
 
 
 
-
+//same as the above 
       this.setState({ ethIsWatching: Retval.EthWatch.Watching }, function () {
         if (this.state.ethIsWatching == "yes") {
 
@@ -1482,7 +1472,7 @@ class WatchMScreen extends React.Component {
 
 
 
-
+//this initalizes the states for each of the variables  on the watch screen 
       this.setState({ btcWatchVal: Retval.BtcWatch.WatchVal });
       this.setState({ btcWatchType: Retval.BtcWatch.WatchType });
 
@@ -1507,7 +1497,7 @@ class WatchMScreen extends React.Component {
 
 
 
-
+//this part updates the watch value for btc when the user selects the picker
   btcWtUp = (btcwatchval) => {
     this.setState({ btcWatchType: btcwatchval }, function () {
       console.log(this.state.btcWatchVal);
@@ -1515,6 +1505,7 @@ class WatchMScreen extends React.Component {
     });
 
   }
+  //this part updates the watch value for ltc when the user selects the picker
   ltcWtUp = (ltcwatchval) => {
     this.setState({ ltcWatchType: ltcwatchval }, function () {
       console.log(this.state.ltcWatchVal);
@@ -1522,6 +1513,7 @@ class WatchMScreen extends React.Component {
     });
 
   }
+  //this part updates the watch value for eth when the user selects the picker
   EthWtUp = (ethwatchval) => {
     console.log(ethwatchval);
     this.setState({ ethWatchType: ethwatchval }, function () {
@@ -1530,16 +1522,18 @@ class WatchMScreen extends React.Component {
     });
 
   }
+  //this part updates the db with the watch values when the user selcets the btc watch button 
   BtcUpdateWatch() {
-
+//this part checks if the watch value or the watch type is null or blank
     if (this.state.btcWatchVal == 0 || this.state.btcWatchVal == null || this.state.btcWatchVal == "" || this.state.btcWatchVal == " ") {
       ToastAndroid.show('please enter a Watch value', ToastAndroid.SHORT);
     }
     else if (this.state.btcWatchType == 0 || this.state.btcWatchType == null || this.state.btcWatchType == "" || this.state.btcWatchType == " ") {
       ToastAndroid.show('please enter watch type', ToastAndroid.SHORT);
     }
+    //this part checks if the user is currently watching this. 
     else if (this.state.btcIsWatching == "no") {
-
+//this part defines the new watch varible 
       let newuser1 = global.UserNameglobal;
 
       let newuser = {
@@ -1549,6 +1543,7 @@ class WatchMScreen extends React.Component {
 
 
       };
+      //this part merges this variabble in to the storage 
       // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
       AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
         AsyncStorage.getItem(newuser1, (err, result) => {
@@ -1569,7 +1564,7 @@ class WatchMScreen extends React.Component {
         });
       });
 
-
+//this part changes screens quickly and then back to the same one to update the screen 
       this.props.navigation.dispatch(StackActions.reset({
         index: 0,
         actions: [
@@ -1592,10 +1587,11 @@ class WatchMScreen extends React.Component {
 
 
     }
+    //this part checks if the user is wathcing 
     else if (this.state.btcIsWatching == "yes") {
 
       let newuser1 = global.UserNameglobal;
-
+//this is the watching variable that is going to be merged into the storage 
       let newuser = {
 
         BtcWatch: { Watching: "no", WatchVal: 0, WatchType: "" },
@@ -1604,9 +1600,11 @@ class WatchMScreen extends React.Component {
 
       };
       // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+        //this part merges the variable 
       AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
         AsyncStorage.getItem(newuser1, (err, result) => {
           let Retval = JSON.parse(result);
+          //this part outputs the vraibles this is jsut for debugging
           console.log(Retval.UserName1);
           console.log("returned storage value");
           console.log(Retval.BtcWatch.Watching);
@@ -1622,7 +1620,7 @@ class WatchMScreen extends React.Component {
 
         });
       });
-
+//this part changes the screen to update it 
       this.props.navigation.dispatch(StackActions.reset({
         index: 0,
         actions: [
@@ -1652,6 +1650,7 @@ class WatchMScreen extends React.Component {
 
 
   }
+  //this part updates the db with the watch values when the user selcets the ltc watch button 
   LtcUpdateWatch() {
 
     if (this.state.ltcWatchVal == 0 || this.state.ltcWatchVal == null || this.state.ltcWatchVal == "" || this.state.ltcWatchVal == " ") {
@@ -1776,6 +1775,7 @@ class WatchMScreen extends React.Component {
 
 
   }
+  //this part updates the db with the watch values when the user selcets the eth watch button 
   EthUpdateWatch() {
 
     if (this.state.ethWatchVal == 0 || this.state.ethWatchVal == null || this.state.ethWatchVal == "" || this.state.ethWatchVal == " ") {
@@ -2085,12 +2085,14 @@ class WatchMScreen extends React.Component {
 class TrackScreen extends React.Component {
   constructor(props) {
     super(props)
+    //this part sets the states for the track screen 
     this.state = { btcBuyPrice: 0, btcSellPrice: 0, ethBuyPrice: 0, ethSellPrice: 0, ltcBuyPrice: 0, ltcSellPrice: 0, btcIsWatching: " ", btcisinv: "", btctotalInv: 0, btcinvquant: 0, btcintsatus: "", ltcisinv: "", ltctotalInv: 0, ltcinvquant: 0, ltcintsatus: "", ethisinv: "", ethtotalInv: 0, ethinvquant: 0, ethintsatus: "", btcButtonVal: "", ltcButtonVal: "", ethButtonVal: "",btcinvper:0,ltcinvper:0,ethinvper:0 };
   }
 
   componentDidMount() {
     console.log(global.currencyglobal);
     //chooses the currency 
+    //this part checks if the users currency is euro and fetches the data from the api
     if (global.currencyglobal == "euro") {
       console.log("this is working");
       // calling the API
@@ -2214,6 +2216,7 @@ class TrackScreen extends React.Component {
 
 
     }
+    //this part checks if the users currency is usd and fetches the data from the api
     else if (global.currencyglobal == "usd") {
       console.log("this is working");
       // calling the API
@@ -2338,6 +2341,7 @@ class TrackScreen extends React.Component {
 
 
     }
+    //this part checks if the users currency is aud and fetches the data from the api
     else if (global.currencyglobal == "aud") {
       console.log("this is working");
       // calling the API
@@ -2475,12 +2479,12 @@ class TrackScreen extends React.Component {
 
 
 
+//this part gets the values from the storage and initializes them 
+//this part makes the table name    
+let newuser1 = global.UserNameglobal;
 
-    let newuser1 = global.UserNameglobal;
 
-
-    // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
-    //  AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+//this part gets the values from the db
     AsyncStorage.getItem(newuser1, (err, result) => {
       let Retval = JSON.parse(result);
       console.log(Retval.UserName1);
@@ -2492,9 +2496,10 @@ class TrackScreen extends React.Component {
       console.log(Retval.BtcInv.InvSatus);
 
 
-
-
+//this part sets the values for the buttons on the screen
+//sets the state for if the user is investing 
       this.setState({ btcisinv: Retval.BtcInv.Investment }, function () {
+        //if they are then set the buttons value to delete
         if (this.state.btcisinv == "yes") {
 
           this.setState({ btcButtonVal: "del " }, function () {
@@ -2503,6 +2508,7 @@ class TrackScreen extends React.Component {
 
 
         }
+        //if they arent then make it blank
         else if (this.state.btcisinv == "no") {
 
 
@@ -2515,7 +2521,7 @@ class TrackScreen extends React.Component {
         }
 
       });
-
+//this part initializes the varaibles for the screen its does this by setting the state  for the btc invesment details 
       this.setState({btctotalInv:Retval.BtcInv.InvToal});
       this.setState({btcinvquant:Retval.BtcInv.InvQuant});
 
@@ -2523,7 +2529,7 @@ class TrackScreen extends React.Component {
       this.setState({btcintsatus:Retval.BtcInv.InvSatus});
 
 
-
+//this is the same as btc however it does it for ltc instead
       this.setState({ ltcisinv: Retval.LtcInv.Investment }, function () {
         if (this.state.ltcisinv == "yes") {
 
@@ -2555,7 +2561,7 @@ class TrackScreen extends React.Component {
 
 
 
-
+//this is the same as btc however it does it for eth instead
       this.setState({ ethisinv: Retval.EthInv.Investment }, function () {
         if (this.state.ethisinv == "yes") {
 
@@ -2612,7 +2618,9 @@ class TrackScreen extends React.Component {
 
 
   }
+  //this function deletes the btc values from the sotrage 
 deleteBtc(){
+  //this part checks the button value and if it is blank becaue ifit is blank then it doenst need to delete anything
 if(this.state.btcButtonVal==""||this.state.btcButtonVal == " "||this.state.btcButtonVal==null){
   ToastAndroid.show('please add  a btc Investment', ToastAndroid.SHORT);
 }
@@ -2620,7 +2628,7 @@ else{
 
 
 
-
+//this creates the variable that is going to be merged to the stroage to remove the ucrrent values 
   let newuser1 = global.UserNameglobal;
 
   let newuser = {
@@ -2631,6 +2639,7 @@ else{
 
   };
   // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+    //this part merges the values  to the sotrage 
   AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
     AsyncStorage.getItem(newuser1, (err, result) => {
       let Retval = JSON.parse(result);
@@ -2651,7 +2660,7 @@ else{
     });
   });
 
-
+//this part changes screens and then goes back to theasme one to update the screen 
   this.props.navigation.dispatch(StackActions.reset({
     index: 0,
     actions: [
@@ -2690,6 +2699,7 @@ else{
 
 
 }
+//this function deletes the eth values from the sotrage it is the same as delte btc
 deleteEth(){
   if(this.state.ethButtonVal==""||this.state.ethButtonVal == " "||this.state.ethButtonVal==null){
     ToastAndroid.show('please add  a eth Investment', ToastAndroid.SHORT);
@@ -2766,6 +2776,7 @@ deleteEth(){
   
   }
 }
+//this function deletes the ltc values from the sotrage it is the same as delte btc
 deleteLtc(){
   if(this.state.ltcButtonVal==""||this.state.ltcButtonVal == " "||this.state.ltcButtonVal==null){
     ToastAndroid.show('please add  a ltc Investment', ToastAndroid.SHORT);
@@ -2978,16 +2989,16 @@ deleteLtc(){
   }
 }
 class InvAddScreen extends React.Component {
-
+//this part sets the state for the inv add screen 
   state = { userName: " ", password: " ", currency: '', investmentType: "", isInvesting: '', indivdinvesmtentammount: 0, TotinvestmentValue: 0, quantityOfInvestment: 0, investmentStatus: "" };
-
+//this part updates the state for the investment type 
   updateInvestType = (inv1) => {
     this.setState({ investmentType: inv1 });
   }
-
+//this part adds the investment to the storage 
   AddInvestment() {
 
-
+//this part checks if the quntitiy,the investment ammount and the investment type is null, 0 or empty 
     if (this.state.quantityOfInvestment == null || this.state.quantityOfInvestment == 0 || this.state.quantityOfInvestment == "") {
       ToastAndroid.show('input a quantity', ToastAndroid.SHORT);
     }
@@ -2998,26 +3009,30 @@ class InvAddScreen extends React.Component {
       ToastAndroid.show('select  a investment type', ToastAndroid.SHORT);
     }
     else {
+      //this part updates the record in the async storage 
+      //this part sets the toals invesment ammount 
       let toatalVal = this.state.quantityOfInvestment * this.state.indivdinvesmtentammount;
+      //this part only works when the state is set , i did it this way becasue the state is async and would give me a undefined error if i didnt do it this way 
       this.setState({ TotinvestmentValue: toatalVal }, function () {
         let newuser1 = global.UserNameglobal;
+        //this part checks the investment type
         if (this.state.investmentType == "btc") {
-
+//this parts creates the variable this is to be updated in the sotrage 
           let newuser = {
 
             BtcInv: { Investment: "yes", InvValPer: this.state.indivdinvesmtentammount, InvToal: this.state.TotinvestmentValue, InvQuant: this.state.quantityOfInvestment, InvSatus: " ok" },
-            // LtcInv: { Investment: "no", InvValPer: 0, InvToal: 0, InvQuant:0 , InvSatus:""},
-            // EthInv: { Investment: "no", InvValPer: 0, InvToal: 0, InvQuant:0, InvSatus:"" },
+        
 
 
           };
-          //AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+          //this part merges it into the db
           AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+           //this part gets the values and is only for checking purposes 
             AsyncStorage.getItem(newuser1, (err, result) => {
               let Retval = JSON.parse(result);
               console.log(Retval.UserName1);
 
-
+//this part notifies the user
               ToastAndroid.show('added btc investment', ToastAndroid.SHORT);
 
 
@@ -3026,6 +3041,7 @@ class InvAddScreen extends React.Component {
 
 
         }
+        //same as the btc one  but it updates the eth file in the storage 
         else if (this.state.investmentType == "eth") {
           let newuser = {
 
@@ -3048,6 +3064,7 @@ class InvAddScreen extends React.Component {
           });
 
         }
+        //same as the btc one but it updates the ltc file on the sotrage 
         else if (this.state.investmentType == "ltc") {
 
 
