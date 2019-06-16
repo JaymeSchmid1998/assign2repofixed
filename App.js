@@ -7,10 +7,10 @@
  */
 import React from 'react';
 
-import { View, Text, TouchableOpacity, TextInput, Picker, Button, StyleSheet, style, br } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, Picker, Button, StyleSheet, style, br, ToastAndroid } from 'react-native';
 import { createAppContainer, createStackNavigator, StackActions, NavigationActions } from 'react-navigation';
 import { AsyncStorage } from 'react-native';
-import { Global } from '@jest/types';
+
 
 
 class LoginScreen extends React.Component {
@@ -93,15 +93,19 @@ class LoginScreen extends React.Component {
 
 
     try {
-      let newuser1 = this.state.userName;
-      if (this.state.userName == null || this.state.user == "") {
+
+      if (this.state.userName == null || this.state.userName == "" || this.state.userName == " ") {
         console.log('enter username');
+        ToastAndroid.show('please enter a username', ToastAndroid.SHORT);
       }
-      try {
-        if (this.state.password == null || this.state.password == "") {
-          console.log('enter password');
-        }
+
+      else if (this.state.password == null || this.state.password == "" || this.state.password == " ") {
+        console.log('enter password');
+        ToastAndroid.show('please enter a password', ToastAndroid.SHORT);
+      }
+      else {
         try {
+          let newuser1 = this.state.userName;
           AsyncStorage.getItem(newuser1, (err, result) => {
             let Retval = JSON.parse(result);
             console.log("username");
@@ -127,22 +131,20 @@ class LoginScreen extends React.Component {
               }
               else {
                 console.log("invalid password");
+                ToastAndroid.show('please enter valid password', ToastAndroid.SHORT);
               }
             }
             else {
               console.log("invalid username");
+              ToastAndroid.show('please enter valid username', ToastAndroid.SHORT);
             }
           });
         }
         catch (e) {
           console.log(e);
         }
+      }
 
-      }
-      catch (e) {
-        console.log(e);
-        console.log(" password is null");
-      }
     }
     catch (e) {
       console.log(e);
@@ -242,14 +244,17 @@ class RegisterScreen extends React.Component {
     let newuser1 = this.state.userName;
 
 
-    if (this.state.userName == null || this.state.user == "") {
+    if (this.state.userName == null || this.state.userName == " " || this.state.userName == "") {
       console.log('enter username');
+      ToastAndroid.show('please enter a username', ToastAndroid.SHORT);
     }
-    else if (this.state.password == null || this.state.password == "") {
+    else if (this.state.password == null || this.state.password == " ") {
       console.log('enter username');
+      ToastAndroid.show('please enter a password', ToastAndroid.SHORT);
     }
     else if (this.state.currency == null || this.state.currency == "") {
       console.log('enter username');
+      ToastAndroid.show('please select a currency', ToastAndroid.SHORT);
     }
     else {
       let newuser = {
@@ -269,6 +274,16 @@ class RegisterScreen extends React.Component {
         AsyncStorage.getItem(newuser1, (err, result) => {
           let Retval = JSON.parse(result);
           console.log(Retval.UserName1);
+
+
+          ToastAndroid.show('Registered succesfully', ToastAndroid.SHORT);
+
+
+
+
+
+
+
         });
       });
 
@@ -423,58 +438,46 @@ class MainScreen extends React.Component {
   }
 }
 class SettingsScreen extends React.Component {
-  state = { userName: " ", password: " ", currency:" ", notFreq: " " };
+ 
   constructor(props) {
-    //1
-    super(props);
-    //2
-
-
-    //3
-    // this.handlechange = this.handlechange.bind(this);
-    //this.validateUser = this.validateUser.bind(this);
-   // this.UpdateUserLocation = this.UpdateUserLocation.bind(this);
-    //4:user  data 
-
-
-
-    this.users = [
-      { userName: "aaa", passhash: "abc" },
-      { userName: "bb", passhash: "123" }
-    ];
-
+    super(props)
+  
   }
-
+  state = {currency: ' ', notFreq: ' ' };
 
   updatecurrency = (currency1) => {
-    let statecurrency=currency1;
+    let statecurrency = currency1;
     console.log(statecurrency);
-    this.setState({ currency: statecurrency });
+    this.setState({ currency: statecurrency }, function () {
+      console.log("state currency");
+     
+      console.log(this.state.currency);
+ });
 
     //console.log(this.state.userName);
-    console.log("state currency");
-   console.log(this.state.currency);
-   console.log("returned  currency");
-console.log(currency1);
+     
+     //console.log(this.state.currency);
+    //  console.log("returned  currency");
+    //console.log(currency1);
 
     let newuser1 = global.UserNameglobal;
-console.log(newuser1);
+    console.log(newuser1);
     let newuser = {
 
       Currency: currency1,
 
 
     };
-   // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
-      AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+    // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+    AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
       AsyncStorage.getItem(newuser1, (err, result) => {
         let Retval = JSON.parse(result);
         console.log("username");
         console.log(Retval.UserName1);
         console.log("currency");
         console.log(Retval.Currency);
-        global.currencyglobal=Retval.currency;
-      //  this.setState({ currency: Retval.Currency })
+        global.currencyglobal = Retval.currency;
+        //  this.setState({ currency: Retval.Currency })
       });
     });
 
@@ -488,7 +491,7 @@ console.log(newuser1);
     // console.log(this.state.password);
     console.log(this.state.currency);
     console.log("notification freq state");
-console.log(this.state.notFreq);
+    console.log(this.state.notFreq);
 
     let newuser1 = global.UserNameglobal;
 
@@ -499,7 +502,7 @@ console.log(this.state.notFreq);
 
     };
     //AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
-      AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+    AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
       AsyncStorage.getItem(newuser1, (err, result) => {
         let Retval = JSON.parse(result);
         console.log(Retval.UserName1);
@@ -519,51 +522,51 @@ console.log(this.state.notFreq);
     return (
       <View style={styles.MainContiner}>
         <Text style={styles.Header}>Settings</Text>
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        
-
-
-        <Text>Location</Text>
-        <Picker
-
-          style={{ height: 50, width: 100 }}
-          selectedValue={this.state.currency} onValueChange={this.updatecurrency} >
-          <Picker.Item label=" " value="aud" />
-          <Picker.Item label="aud" value="aud" />
-          <Picker.Item label="euro" value="euro" />
-          <Picker.Item label="usd" value="usd" />
-        </Picker>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 
 
 
-        <Text>notifications </Text>
+          <Text>Location</Text>
+          <Picker
+
+            style={{ height: 50, width: 100 }}
+            selectedValue={this.state.currency} onValueChange={this.updatecurrency} >
+            <Picker.Item label=" " value="aud" />
+            <Picker.Item label="aud" value="aud" />
+            <Picker.Item label="euro" value="euro" />
+            <Picker.Item label="usd" value="usd" />
+          </Picker>
 
 
-        <Text>notification freqency</Text>
-        <Picker
 
-          style={{ height: 50, width: 100 }}
-          selectedValue={this.state.notFreq} onValueChange={this.updateNotFreq} >
-          <Picker.Item label=" " value="hourly" />
-          <Picker.Item label="hourly" value="hourly" />
-          <Picker.Item label="daily" value="daily" />
-          <Picker.Item label="weekly" value="weekly" />
-        </Picker>
+          <Text>notifications </Text>
 
 
-        <Button
-          title="Back to Main screen "
-          color="#7a7c82"
-          onPress={() => {
-            this.props.navigation.dispatch(StackActions.reset({
-              index: 0,
-              actions: [
-                NavigationActions.navigate({ routeName: 'Main' })
-              ],
-            }))
-          }}
-        />
-      </View>
+          <Text>notification freqency</Text>
+          <Picker
+
+            style={{ height: 50, width: 100 }}
+            selectedValue={this.state.notFreq} onValueChange={this.updateNotFreq} >
+            <Picker.Item label=" " value="hourly" />
+            <Picker.Item label="hourly" value="hourly" />
+            <Picker.Item label="daily" value="daily" />
+            <Picker.Item label="weekly" value="weekly" />
+          </Picker>
+
+
+          <Button
+            title="Back to Main screen "
+            color="#7a7c82"
+            onPress={() => {
+              this.props.navigation.dispatch(StackActions.reset({
+                index: 0,
+                actions: [
+                  NavigationActions.navigate({ routeName: 'Main' })
+                ],
+              }))
+            }}
+          />
+        </View>
       </View>
     );
   }
@@ -1008,23 +1011,1072 @@ class GeneralScreen extends React.Component {
     );
   }
 }
+
 class WatchMScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Watch market Screen</Text>
-        <Button
-          title="Back to  main menu "
-          onPress={() => {
+  constructor(props) {
+    super(props)
+    this.state = { btcBuyPrice: 0, btcSellPrice: 0, ethBuyPrice: 0, ethSellPrice: 0, ltcBuyPrice: 0, ltcSellPrice: 0,btcIsWatching:" " , btcButtonVal: "", btcWatchVal: 0, btcWatchType: "",ltcIsWatching:" " , ltcButtonVal: "", ltcWatchVal: 0, ltcWatchType: "",ethIsWatching:" " , ethButtonVal: "", ethWatchVal: 0, ethWatchType: "" };
+  }
+
+
+
+
+
+
+
+  componentDidMount() {
+    console.log(global.currencyglobal);
+    //chooses the currency 
+    if (global.currencyglobal == "euro") {
+      console.log("this is working");
+      // calling the API
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceEuro/GetPriceBtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log(responseJson);
+          this.setState({ btcBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ btcBuyPrice: responseJson });
+          this.setState({ btcBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceEuro/GetPriceEth')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ethBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ethBuyPrice: responseJson });
+          this.setState({ ethBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceEuro/GetPriceLtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ltcBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ltcBuyPrice: responseJson });
+          this.setState({ ltcBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceEuro/GetPriceBtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ btcBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ btcBuyPrice: responseJson });
+          this.setState({ btcBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceEuro/GetPriceEth')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ethBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ethBuyPrice: responseJson });
+          this.setState({ ethBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceEuro/GetPriceLtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ltcBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ltcBuyPrice: responseJson });
+          this.setState({ ltcBuyPrice: -1 });
+        });
+
+
+      fetch('http://10.0.0.98:3000/api/CrptSellPriceEuro/GetPriceBtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ btcSellPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ btcSellPrice: responseJson });
+          this.setState({ btcSellPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptSellPriceEuro/GetPriceEth')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ethSellPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ethSellPrice: responseJson });
+          this.setState({ ethSellPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptSellPriceEuro/GetPriceLtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ltcSellPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ltcSellPrice: responseJson });
+          this.setState({ ltcSellPrice: -1 });
+        });
+
+    }
+    else if (global.currencyglobal == "usd") {
+      console.log("this is working");
+      // calling the API
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceUsd/GetPriceBtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log(responseJson);
+          this.setState({ btcBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ btcBuyPrice: responseJson });
+          this.setState({ btcBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceUsd/GetPriceEth')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ethBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ethBuyPrice: responseJson });
+          this.setState({ ethBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceUsd/GetPriceLtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ltcBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ltcBuyPrice: responseJson });
+          this.setState({ ltcBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceUsd/GetPriceBtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ btcBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ btcBuyPrice: responseJson });
+          this.setState({ btcBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceUsd/GetPriceEth')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ethBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ethBuyPrice: responseJson });
+          this.setState({ ethBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceUsd/GetPriceLtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ltcBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ltcBuyPrice: responseJson });
+          this.setState({ ltcBuyPrice: -1 });
+        });
+
+
+      fetch('http://10.0.0.98:3000/api/CrptSellPriceUsd/GetPriceBtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ btcSellPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ btcSellPrice: responseJson });
+          this.setState({ btcSellPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptSellPriceUsd/GetPriceEth')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ethSellPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ethSellPrice: responseJson });
+          this.setState({ ethSellPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptSellPriceUsd/GetPriceLtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ltcSellPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ltcSellPrice: responseJson });
+          this.setState({ ltcSellPrice: -1 });
+        });
+
+
+
+    }
+    else if (global.currencyglobal == "aud") {
+      console.log("this is working");
+      // calling the API
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceAud/GetPriceBtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log(responseJson);
+          this.setState({ btcBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ btcBuyPrice: responseJson });
+          this.setState({ btcBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceAud/GetPriceEth')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ethBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ethBuyPrice: responseJson });
+          this.setState({ ethBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceAud/GetPriceLtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ltcBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ltcBuyPrice: responseJson });
+          this.setState({ ltcBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceAud/GetPriceBtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ btcBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ btcBuyPrice: responseJson });
+          this.setState({ btcBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceAud/GetPriceEth')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ethBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ethBuyPrice: responseJson });
+          this.setState({ ethBuyPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptBuyPriceAud/GetPriceLtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ltcBuyPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ltcBuyPrice: responseJson });
+          this.setState({ ltcBuyPrice: -1 });
+        });
+
+
+      fetch('http://10.0.0.98:3000/api/CrptSellPriceAud/GetPriceBtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ btcSellPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ btcSellPrice: responseJson });
+          this.setState({ btcSellPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptSellPriceAud/GetPriceEth')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ethSellPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ethSellPrice: responseJson });
+          this.setState({ ethSellPrice: -1 });
+        });
+
+      fetch('http://10.0.0.98:3000/api/CrptSellPriceAud/GetPriceLtc')
+        .then((Response) => Response.json())
+        .then((responseJson) => {
+          console.log("this is working");
+          this.setState({ ltcSellPrice: responseJson });
+
+        }).catch(e => {
+          console.log("this is  not working");
+          console.log(e);
+          console.log({ ltcSellPrice: responseJson });
+          this.setState({ ltcSellPrice: -1 });
+        });
+
+    }
+    let newuser1=global.UserNameglobal;
+
+     
+     // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+      //  AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+        AsyncStorage.getItem(newuser1, (err, result) => {
+          let Retval = JSON.parse(result);
+          console.log(Retval.UserName1);
+          console.log("returned storage value");
+          console.log(Retval.BtcWatch.Watching);
+          console.log(Retval.BtcWatch.WatchVal);
+          console.log(Retval.BtcWatch.WatchType);
+this.setState({btcIsWatching:Retval.BtcWatch.Watching}, function () {
+  if(this.state.btcIsWatching=="yes"){
+
+this.setState({btcButtonVal:"Unwatch "},function(){
+console.log(this.state.btcButtonVal);
+});
+    
+    
+  }
+ else  if(this.state.btcIsWatching=="no"){
+
+
+  this.setState({btcButtonVal:"Watch "},function(){
+    console.log(this.state.btcButtonVal);
+    });
+
+
+
+  }
+
+});
+
+this.setState({ltcIsWatching:Retval.LtcWatch.Watching}, function () {
+  if(this.state.ltcIsWatching=="yes"){
+
+this.setState({ltcButtonVal:"Unwatch "},function(){
+console.log(this.state.ltcButtonVal);
+});
+    
+    
+  }
+ else  if(this.state.ltcIsWatching=="no"){
+
+
+  this.setState({ltcButtonVal:"Watch "},function(){
+    console.log(this.state.ltcButtonVal);
+    });
+
+
+
+  }
+
+});
+
+
+
+
+
+this.setState({ethIsWatching:Retval.EthWatch.Watching}, function () {
+  if(this.state.ethIsWatching=="yes"){
+
+this.setState({ethButtonVal:"Unwatch "},function(){
+console.log(this.state.ethButtonVal);
+});
+    
+    
+  }
+ else  if(this.state.ethIsWatching=="no"){
+
+
+  this.setState({ethButtonVal:"Watch "},function(){
+    console.log(this.state.ethButtonVal);
+    });
+
+
+
+  }
+
+});
+
+
+
+
+
+this.setState({btcWatchVal:Retval.BtcWatch.WatchVal});
+this.setState({btcWatchType:Retval.BtcWatch.WatchType});
+
+this.setState({ltcWatchVal:Retval.LtcWatch.WatchVal});
+this.setState({ltcWatchType:Retval.LtcWatch.WatchType});
+
+this.setState({ethWatchVal:Retval.EthWatch.WatchVal});
+this.setState({ethWatchType:Retval.EthWatch.WatchType});
+//ToastAndroid.show('Registered succesfully', ToastAndroid.SHORT);
+
+
+
+
+
+
+
+        });
+     // });
+
+  }
+
+
+
+
+
+  btcWtUp = (btcwatchval) => {
+    this.setState({ btcWatchType: btcwatchval }, function () {
+      console.log(this.state.btcWatchVal);
+      console.log(this.state.btcWatchType);
+        });
+    
+  }
+  ltcWtUp = (ltcwatchval) => {
+    this.setState({ ltcWatchType: ltcwatchval }, function () {
+      console.log(this.state.ltcWatchVal);
+      console.log(this.state.ltcWatchType);
+        });
+    
+  }
+  EthWtUp = (ethwatchval) => {
+    console.log(ethwatchval);
+    this.setState({ ethWatchType: ethwatchval }, function () {
+      console.log(this.state.ethWatchVal);
+      console.log(this.state.ethWatchType);
+        });
+    
+  }
+  BtcUpdateWatch(){
+
+    if(this.state.btcWatchVal==0||this.state.btcWatchVal==null||this.state.btcWatchVal==""||this.state.btcWatchVal==" "){
+      ToastAndroid.show('please enter a Watch value', ToastAndroid.SHORT);
+    }
+    else if(this.state.btcWatchType==0||this.state.btcWatchType==null||this.state.btcWatchType==""||this.state.btcWatchType==" "){
+      ToastAndroid.show('please enter watch type', ToastAndroid.SHORT);
+    }
+    else if (this.state.btcIsWatching=="no"){
+
+let newuser1=global.UserNameglobal;
+
+      let newuser = {
+        
+        BtcWatch: { Watching: "yes", WatchVal:this.state.btcWatchVal, WatchType:this.state.btcWatchType },
+      
+
+
+      };
+     // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+        AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+        AsyncStorage.getItem(newuser1, (err, result) => {
+          let Retval = JSON.parse(result);
+          console.log(Retval.UserName1);
+          console.log("returned storage value");
+          console.log(Retval.BtcWatch.Watching);
+          console.log(Retval.BtcWatch.WatchVal);
+          console.log(Retval.BtcWatch.WatchType);
+          ToastAndroid.show('Watched BTC', ToastAndroid.SHORT);
+
+
+
+
+
+
+
+        });
+      });
+
+
+      this.props.navigation.dispatch(StackActions.reset({
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: 'Main' })
+        ],
+      }))
+      
+        this.props.navigation.dispatch(StackActions.reset({
+          index: 0,
+          actions: [
+            NavigationActions.navigate({ routeName: 'WatchMarket' })
+          ],
+        }))
+     
+
+
+
+
+
+
+
+    }
+    else if (this.state.btcIsWatching=="yes"){
+
+      let newuser1=global.UserNameglobal;
+      
+            let newuser = {
+              
+              BtcWatch: { Watching: "no", WatchVal:0, WatchType:"" },
+            
+      
+      
+            };
+           // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+              AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+              AsyncStorage.getItem(newuser1, (err, result) => {
+                let Retval = JSON.parse(result);
+                console.log(Retval.UserName1);
+                console.log("returned storage value");
+                console.log(Retval.BtcWatch.Watching);
+                console.log(Retval.BtcWatch.WatchVal);
+                console.log(Retval.BtcWatch.WatchType);
+                ToastAndroid.show('unwatched BTC', ToastAndroid.SHORT);
+      
+      
+      
+      
+      
+      
+      
+              });
+            });
+      
             this.props.navigation.dispatch(StackActions.reset({
               index: 0,
               actions: [
                 NavigationActions.navigate({ routeName: 'Main' })
               ],
             }))
-          }}
-        />
+            
+              this.props.navigation.dispatch(StackActions.reset({
+                index: 0,
+                actions: [
+                  NavigationActions.navigate({ routeName: 'WatchMarket' })
+                ],
+              }))
+           
+      
+      
+      
+      
+      
+      
+      
+      
+          }
+
+
+
+
+
+  }
+  LtcUpdateWatch(){
+
+    if(this.state.ltcWatchVal==0||this.state.ltcWatchVal==null||this.state.ltcWatchVal==""||this.state.ltcWatchVal==" "){
+      ToastAndroid.show('please enter a Watch value', ToastAndroid.SHORT);
+    }
+    else if(this.state.ltcWatchType==0||this.state.ltcWatchType==null||this.state.ltcWatchType==""||this.state.ltcWatchType==" "){
+      ToastAndroid.show('please enter watch type', ToastAndroid.SHORT);
+    }
+    else if (this.state.ltcIsWatching=="no"){
+
+let newuser1=global.UserNameglobal;
+
+      let newuser = {
+        
+        LtcWatch: { Watching: "yes", WatchVal:this.state.ltcWatchVal, WatchType:this.state.ltcWatchType },
+      
+
+
+      };
+     // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+        AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+        AsyncStorage.getItem(newuser1, (err, result) => {
+          let Retval = JSON.parse(result);
+          console.log(Retval);
+          console.log(Retval.UserName1);
+          console.log("returned storage value");
+          console.log(Retval.LtcWatch.Watching);
+          console.log(Retval.LtcWatch.WatchVal);
+          console.log(Retval.LtcWatch.WatchType);
+          ToastAndroid.show('Watched BTC', ToastAndroid.SHORT);
+
+
+
+
+
+
+
+        });
+      });
+
+
+      this.props.navigation.dispatch(StackActions.reset({
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: 'Main' })
+        ],
+      }))
+      
+        this.props.navigation.dispatch(StackActions.reset({
+          index: 0,
+          actions: [
+            NavigationActions.navigate({ routeName: 'WatchMarket' })
+          ],
+        }))
+     
+
+
+
+
+
+
+
+    }
+    else if (this.state.ltcIsWatching=="yes"){
+
+      let newuser1=global.UserNameglobal;
+      
+            let newuser = {
+              
+              LtcWatch: { Watching: "no", WatchVal:0, WatchType:"" },
+            
+      
+      
+            };
+           // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+              AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+              AsyncStorage.getItem(newuser1, (err, result) => {
+                let Retval = JSON.parse(result);
+                console.log(Retval);
+                console.log(Retval.UserName1);
+                console.log("returned storage value");
+                console.log(Retval.LtcWatch.Watching);
+                console.log(Retval.LtcWatch.WatchVal);
+                console.log(Retval.LtcWatch.WatchType);
+                ToastAndroid.show('unwatched BTC', ToastAndroid.SHORT);
+      
+      
+      
+      
+      
+      
+      
+              });
+            });
+      
+            this.props.navigation.dispatch(StackActions.reset({
+              index: 0,
+              actions: [
+                NavigationActions.navigate({ routeName: 'Main' })
+              ],
+            }))
+            
+              this.props.navigation.dispatch(StackActions.reset({
+                index: 0,
+                actions: [
+                  NavigationActions.navigate({ routeName: 'WatchMarket' })
+                ],
+              }))
+           
+      
+      
+      
+      
+      
+      
+      
+      
+          }
+
+
+
+
+
+  }
+  EthUpdateWatch(){
+
+    if(this.state.ethWatchVal==0||this.state.ethWatchVal==null||this.state.ethWatchVal==""||this.state.ethWatchVal==" "){
+      ToastAndroid.show('please enter a Watch value', ToastAndroid.SHORT);
+    }
+    else if(this.state.ethWatchType==0||this.state.ethWatchType==null||this.state.ethWatchType==""||this.state.ethWatchType==" "){
+      ToastAndroid.show('please enter watch type', ToastAndroid.SHORT);
+    }
+    else if (this.state.ethIsWatching=="no"){
+
+let newuser1=global.UserNameglobal;
+
+      let newuser = {
+        
+        EthWatch: { Watching: "yes", WatchVal:this.state.ethWatchVal, WatchType:this.state.ethWatchType },
+      
+
+
+      };
+     // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+        AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+        AsyncStorage.getItem(newuser1, (err, result) => {
+          let Retval = JSON.parse(result);
+          console.log(Retval.UserName1);
+          console.log("returned storage value");
+          console.log(Retval.EthWatch.Watching);
+          console.log(Retval.EthWatch.WatchVal);
+          console.log(Retval.EthWatch.WatchType);
+          ToastAndroid.show('Watched BTC', ToastAndroid.SHORT);
+
+
+
+
+
+
+
+        });
+      });
+
+
+      this.props.navigation.dispatch(StackActions.reset({
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: 'Main' })
+        ],
+      }))
+      
+        this.props.navigation.dispatch(StackActions.reset({
+          index: 0,
+          actions: [
+            NavigationActions.navigate({ routeName: 'WatchMarket' })
+          ],
+        }))
+     
+
+
+
+
+
+
+
+    }
+    else if (this.state.ethIsWatching=="yes"){
+
+      let newuser1=global.UserNameglobal;
+      
+            let newuser = {
+              
+              EthWatch: { Watching: "no", WatchVal:0, WatchType:"" },
+            
+      
+      
+            };
+           // AsyncStorage.setItem(newuser1, JSON.stringify(newuser), () => {
+              AsyncStorage.mergeItem(newuser1, JSON.stringify(newuser), () => {
+              AsyncStorage.getItem(newuser1, (err, result) => {
+                let Retval = JSON.parse(result);
+                console.log(Retval.UserName1);
+                console.log("returned storage value");
+                console.log(Retval.EthWatch.Watching);
+                console.log(Retval.EthWatch.WatchVal);
+                console.log(Retval.EthWatch.WatchType);
+                ToastAndroid.show('unwatched BTC', ToastAndroid.SHORT);
+      
+      
+      
+      
+      
+      
+      
+              });
+            });
+      
+            this.props.navigation.dispatch(StackActions.reset({
+              index: 0,
+              actions: [
+                NavigationActions.navigate({ routeName: 'Main' })
+              ],
+            }))
+            
+              this.props.navigation.dispatch(StackActions.reset({
+                index: 0,
+                actions: [
+                  NavigationActions.navigate({ routeName: 'WatchMarket' })
+                ],
+              }))
+           
+      
+      
+      
+      
+      
+      
+      
+      
+          }
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  render() {
+    return (
+
+
+      <View style={styles.MainContiner}>
+        <Text style={styles.Header}>Watch market Screen</Text>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+
+
+          <View style={styles.TableboxWatch}>
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+              <Text>Buy bitcoin cash price: </Text>
+              <Text>{this.state.btcBuyPrice}</Text>
+            </View>
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+              <Text>Sell bitcoin cash price: </Text>
+              <Text>{this.state.btcBuyPrice}</Text>
+            </View>
+
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+            <Button
+           
+              onPress={this.BtcUpdateWatch.bind(this)}
+              title={this.state.btcButtonVal}
+              color="#7a7c82"
+
+            />
+            
+              <Picker
+
+                style={{ height: 50, width: 100 }}
+                selectedValue={this.state.btcWatchType} onValueChange={this.btcWtUp} >
+                <Picker.Item label=" " value="dep" />
+                <Picker.Item label="dep" value="dep" />
+                <Picker.Item label="apr" value="apr" />
+              </Picker>
+
+              
+            </View>
+
+
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+            
+              <TextInput placeholder="watch value:" id="P1" onChangeText={(btcWatchVal => { this.setState({ btcWatchVal }); })} />
+              
+
+              <Text> {this.state.btcWatchVal}</Text>
+            </View>
+
+
+
+
+
+
+          </View>
+
+
+
+
+
+          <View style={styles.TableboxWatch}>
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+              <Text>Buy lite coin  price: </Text>
+              <Text>{this.state.ltcBuyPrice}</Text>
+            </View>
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+              <Text>Sell lite coin price: </Text>
+              <Text>{this.state.ltcSellPrice}</Text>
+            </View>
+
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+            <Button
+           
+              onPress={this.LtcUpdateWatch.bind(this)}
+              title={this.state.ltcButtonVal}
+              color="#7a7c82"
+
+            />
+            
+              <Picker
+
+                style={{ height: 50, width: 100 }}
+                selectedValue={this.state.ltcWatchType} onValueChange={this.ltcWtUp} >
+                <Picker.Item label=" " value="dep" />
+                <Picker.Item label="dep" value="dep" />
+                <Picker.Item label="apr" value="apr" />
+              </Picker>
+
+              
+            </View>
+
+
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+            
+              <TextInput placeholder="watch value:" id="P1" onChangeText={(ltcWatchVal => { this.setState({ ltcWatchVal }); })} />
+              
+
+              <Text> {this.state.ltcWatchVal}</Text>
+            </View>
+
+
+
+
+
+
+
+
+          </View>
+
+          <View style={styles.TableboxWatch}>
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+              <Text>Buy etherium price: </Text>
+              <Text>{this.state.ethBuyPrice}</Text>
+            </View>
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+              <Text>Sell etherium price: </Text>
+              <Text>{this.state.ethSellPrice}</Text>
+            </View>
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+            <Button
+           
+              onPress={this.EthUpdateWatch.bind(this)}
+              title={this.state.ethButtonVal}
+              color="#7a7c82"
+
+            />
+            
+              <Picker
+
+                style={{ height: 50, width: 100 }}
+                selectedValue={this.state.ethWatchType} onValueChange={this.EthWtUp} >
+                <Picker.Item label=" " value="dep" />
+                <Picker.Item label="dep" value="dep" />
+                <Picker.Item label="apr" value="apr" />
+              </Picker>
+
+              
+            </View>
+
+
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+            
+              <TextInput placeholder="watch value:" id="P1" onChangeText={(ethWatchVal => { this.setState({ ethWatchVal }); })} />
+              
+
+              <Text> {this.state.ethWatchVal}</Text>
+            </View>
+
+
+
+
+
+          </View>
+          <Button
+            title="Back to main menu "
+            onPress={() => {
+              this.props.navigation.dispatch(StackActions.reset({
+                index: 0,
+                actions: [
+                  NavigationActions.navigate({ routeName: 'Main' })
+                ],
+              }))
+            }}
+          />
+        </View>
       </View>
+
     );
   }
 }
@@ -1205,6 +2257,19 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     borderWidth: 0.5,
     height: 100,
+    width: 300,
+
+
+
+
+
+  },
+  TableboxWatch: {
+
+    borderColor: "#000000",
+    borderRadius: 4,
+    borderWidth: 0.5,
+    height: 150,
     width: 300,
 
 
