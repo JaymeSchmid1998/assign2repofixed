@@ -32,7 +32,7 @@ class LoginScreen extends React.Component {
     // this.handlechange = this.handlechange.bind(this);
     //this part binds the functions
     this.validateUser = this.validateUser.bind(this);
-    this.registerUser = this.registerUser.bind(this);
+    //this.registerUser = this.registerUser.bind(this);
     //4:user  data 
     global.UserNameglobal = '';
     global.passwordglobal = '';
@@ -977,6 +977,7 @@ class GeneralScreen extends React.Component {
             </View>
           </View>
           <Button
+          color="#7a7c82"
             title="Back to main menu "
             onPress={() => {
               this.props.navigation.dispatch(StackActions.reset({
@@ -2067,6 +2068,7 @@ class WatchMScreen extends React.Component {
           </View>
           <Button
             title="Back to main menu "
+            color="#7a7c82"
             onPress={() => {
               this.props.navigation.dispatch(StackActions.reset({
                 index: 0,
